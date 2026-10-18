@@ -17,6 +17,11 @@ namespace ScoreUp.Controllers
         public IActionResult Privacy() => View();
         public IActionResult Terms() => View();
         public IActionResult Contact() => View();
+        public IActionResult Learn() => View();
+
+        // NEW
+        public IActionResult CreditCards() => View();
+        public IActionResult Loans() => View();
 
         [HttpPost]
         public IActionResult Contact(string name, string email, string message)
