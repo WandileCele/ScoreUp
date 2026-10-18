@@ -103,7 +103,7 @@
             try { result = await response.json(); } catch { result = { success: response.ok }; }
 
             if (response.ok && result.success !== false) {
-            successTitle.innerText = '✅ Message sent for real to wandilecele28@gmail.com!';
+            successTitle.innerText = '✅ Message sent to wandilecele28@gmail.com!';
             preview.innerText = `To: wandilecele28@gmail.com\nFrom: ${name} <${email}>\nTopic: ${topic}\n\n${msg}\n\n✓ Sent at ${new Date().toLocaleString()}\n✓ Using appsettings.json`;
             successDiv.classList.remove('hidden');
             successDiv.classList.remove('bg-red-50');
