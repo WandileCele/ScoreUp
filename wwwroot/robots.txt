@@ -1,3 +1,18 @@
 ﻿User-agent: *
 Allow: /
-Sitemap: /sitemap.xml
+
+# Block admin and sensitive paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?*
+
+# Sitemap - Absolute URL required for Google
+Sitemap: https://scoreup-credit-builder.onrender.com/sitemap.xml
+
+# For AdSense / Googlebot
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /

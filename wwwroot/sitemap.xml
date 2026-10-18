@@ -1,15 +1,55 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<!-- Home - Highest priority -->
 	<url>
 		<loc>https://scoreup-credit-builder.onrender.com/</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<!-- Main Money Pages - High priority for SEO -->
+	<url>
+		<loc>https://scoreup-credit-builder.onrender.com/Pages/Learn</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
-		<loc>https://scoreup-credit-builder.onrender.com/Pages/Privacy</loc>
+		<loc>https://scoreup-credit-builder.onrender.com/Pages/CreditCards</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
+	<url>
+		<loc>https://scoreup-credit-builder.onrender.com/Pages/Loans</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<!-- About - Medium priority, important for E-E-A-T -->
 	<url>
 		<loc>https://scoreup-credit-builder.onrender.com/Pages/About</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<!-- Legal - Lower priority but required for AdSense -->
+	<url>
+		<loc>https://scoreup-credit-builder.onrender.com/Pages/Privacy</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://scoreup-credit-builder.onrender.com/Pages/Terms</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://scoreup-credit-builder.onrender.com/Pages/Contact</loc>
+		<lastmod>2026-10-19</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
 	</url>
 </urlset>

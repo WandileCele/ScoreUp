@@ -17,215 +17,126 @@
 
         .no-scroll {
         overflow: hidden
-        }
-    </style>
-</head>
-<body class="bg-white text-slate-900 antialiased">
+        }</style>
+    </head>
+    <body class="bg-white text-slate-900 antialiased">
+        <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4"><span>● Educational content — Not financial advice</span><span class="opacity-30">|</span><span>Updated Oct 19, 2026 · Reviewed by CFPB-certified counselors</span></div>
+        <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <button type="button" id="menuBtn" onclick="openMenu()" class="lg:hidden w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center cursor-pointer relative z-50">☰</button>
+                    <div class="flex items-center gap-8">
+                        <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]"><span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp<span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span></a>
+                        <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600">
+                            <a href="/Pages/Learn" class="px-3 py-2 rounded-full hover:bg-slate-50">Learn</a>
+                            <a href="/Pages/CreditCards" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a>
+                            <a href="/Pages/Loans" class="px-3 py-2 rounded-full bg-slate-900 text-white">Loans</a>
+                            <a href="/#calculators" class="px-3 py-2 rounded-full hover:bg-slate-50">Calculators</a>
+                            <a href="/#reviews" class="px-3 py-2 rounded-full hover:bg-slate-50">Reviews</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3"><span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span><a href="/#calculators" class="h-9 px-5 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center">Check Score Free</a></div>
+            </div>
+        </header>
+        <div id="mobileMenu" class="fixed inset-0 z-[100] hidden">
+            <div id="menuOverlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+            <div class="relative w-[300px] max-w-[85vw] h-full bg-white shadow-2xl flex flex-col">
+                <div class="h-[68px] px-5 flex items-center justify-between border-b"><div class="flex items-center gap-2 font-extrabold text-[18px]"><span class="w-7 h-7 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp</div><button type="button" id="closeMenuBtn" onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button></div>
+                <nav class="p-4 flex flex-col gap-1">
+                    <a href="/" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Home</span><span>→</span></a>
+                    <a href="/Pages/Learn" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Learn</span><span>→</span></a>
+                    <a href="/Pages/CreditCards" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Credit Cards</span><span>→</span></a>
+                    <a href="/Pages/Loans" class="px-4 py-3 rounded-xl bg-slate-900 text-white font-medium flex justify-between"><span>Loans</span><span>→</span></a>
+                </nav>
+                <div class="mt-auto p-4 border-t"><div class="rounded-2xl bg-emerald-50 border border-emerald-100 p-4"><div class="text-[13px] font-bold">Free Score Simulator</div><div class="text-[12px] text-slate-500 mt-1">No email needed.</div><a href="/#calculators" onclick="closeMenu()" class="mt-3 block h-10 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center justify-center">Check Score Free</a></div></div>
+            </div>
+        </div>
 
-    <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4">
-        <span>● Educational content — Not financial advice</span>
-        <span class="opacity-30">|</span>
-        <span>Updated Oct 19, 2026 · Reviewed by CFPB-certified counselors</span>
-    </div>
+        <section class="max-w-[1240px] mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-100 text-[13px] text-amber-800 mb-6"><span class="bg-amber-500 text-white px-2 py-0.5 rounded-full text-[11px] font-bold">WARNING</span>High-risk - Read our guide first</div>
+            <h1 class="text-[34px] md:text-[48px] font-extrabold tracking-tight leading-[0.95] max-w-[720px]">Loans for No Credit: <span class="text-emerald-500">What Actually Works</span> in Oct 2026</h1>
+            <p class="mt-5 text-[16px] md:text-[17px] leading-7 text-slate-500 max-w-[540px]">Most "no credit check" loans are traps. We reviewed CFPB complaints and found <b class="text-slate-900">3 legit options</b> that won't wreck your future score. Educational only.</p>
+            <div class="mt-8 flex flex-wrap gap-2 text-[12px]"><span class="px-3 py-1.5 rounded-full bg-white border">✓ No predatory payday loans listed</span><span class="px-3 py-1.5 rounded-full bg-white border">✓ Reports to bureaus when possible</span><span class="px-3 py-1.5 rounded-full bg-slate-900 text-white">✓ CFPB complaint-checked</span></div>
+        </section>
 
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
-        <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <button type="button" id="menuBtn" onclick="openMenu()" class="lg:hidden w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center cursor-pointer relative z-50">☰</button>
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]">
-                        <span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>
-                        ScoreUp
-                        <span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span>
-                    </a>
-                    <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600">
-                        <a href="/Pages/Learn" class="px-3 py-2 rounded-full hover:bg-slate-50">Learn</a>
-                        <a href="/Pages/CreditCards" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a>
-                        <a href="/Pages/Loans" class="px-3 py-2 rounded-full bg-slate-900 text-white">Loans</a>
-                        <a href="/#calculators" class="px-3 py-2 rounded-full hover:bg-slate-50">Calculators</a>
-                        <a href="/#reviews" class="px-3 py-2 rounded-full hover:bg-slate-50">Reviews</a>
-                    </nav>
+        <section class="bg-slate-50 border-y py-12">
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8">
+                <h2 class="text-[24px] md:text-[28px] font-extrabold tracking-tight">Best Options When You Have No History</h2>
+                <p class="mt-2 text-[13px] text-slate-500">We do NOT recommend payday or title loans. Ever. Click Learn More for details + official site.</p>
+                <div class="mt-6 rounded-[20px] bg-white border overflow-hidden shadow-sm">
+                    <table class="w-full text-[13px]">
+                        <thead class="bg-slate-50 text-[11px] text-slate-500 tracking-widest"><tr><th class="text-left p-4">PRODUCT</th><th class="text-left">BEST FOR</th><th>APR RANGE</th><th>REPORTS?</th><th class="text-right p-4">ACTION</th></tr></thead>
+                        <tbody>
+                            <tr class="border-t bg-emerald-50/40"><td class="p-4"><div class="font-bold">Self - Credit Builder Loan <span class="ml-2 bg-slate-900 text-white text-[10px] px-2 py-0.5 rounded-full">Editor's Pick</span></div><div class="text-[11px] text-slate-500 mt-1">Builds savings + credit history</div></td><td>Building from 0</td><td>~15.92%</td><td><span class="px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold">Yes - All 3</span></td><td class="text-right p-4"><button onclick="openProductModal('self_loan')" class="px-4 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-[12px] font-bold">Learn More →</button></td></tr>
+                            <tr class="border-t"><td class="p-4"><div class="font-bold">Upstart</div><div class="text-[11px] text-slate-500 mt-1">Uses education + job history</div></td><td>Thin file</td><td>7.4% - 35.99%</td><td><span class="px-2 py-1 rounded-full bg-slate-50 text-slate-700 text-[11px]">Yes</span></td><td class="text-right p-4"><button onclick="openProductModal('upstart')" class="px-4 py-1.5 rounded-full bg-slate-900 hover:bg-black text-white text-[12px]">Check Rate →</button></td></tr>
+                            <tr class="border-t"><td class="p-4"><div class="font-bold">Oportun</div><div class="text-[11px] text-slate-500 mt-1">No credit history required</div></td><td>No history at all</td><td>18% - 35.99%</td><td><span class="px-2 py-1 rounded-full bg-slate-50 text-slate-700 text-[11px]">Yes</span></td><td class="text-right p-4"><button onclick="openProductModal('oportun')" class="px-4 py-1.5 rounded-full bg-slate-900 hover:bg-black text-white text-[12px]">Check Rate →</button></td></tr>
+                            <tr class="border-t bg-red-50/50"><td class="p-4"><div class="font-bold text-red-700">AVOID: Payday Loans</div><div class="text-[11px] text-red-600/70 mt-1">CFPB avg APR 391% - traps beginners</div></td><td class="text-red-700">Nobody</td><td class="text-red-700 font-bold">~391%</td><td><span class="px-2 py-1 rounded-full bg-red-100 text-red-700 text-[11px] font-bold">Often No</span></td><td class="text-right p-4"><button onclick="openProductModal('payday_warning')" class="px-4 py-1.5 rounded-full bg-red-600 hover:bg-red-700 text-white text-[12px]">Why Avoid →</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-6 p-5 rounded-2xl bg-amber-50 border border-amber-200 text-[12px] leading-6"><b class="text-amber-900">⚠ Educational Warning (CFPB Data):</b> <span class="text-amber-800">Payday loans have an average fee of $15 per $100 borrowed, which equals 391% APR. 80% are rolled over. We never recommend them for building credit. Build with Self or secured cards first.</span></div>
+            </div>
+        </section>
+
+        <section class="max-w-[1240px] mx-auto px-5 md:px-8 py-12"><h2 class="text-[24px] font-extrabold">How to get your first loan safely - 3 steps</h2><div class="mt-6 grid md:grid-cols-3 gap-6"><div class="rounded-[20px] border bg-white p-6 shadow-sm"><div class="text-[11px] font-bold tracking-widest text-slate-400">STEP 1</div><div class="mt-2 font-bold text-[16px]">Check your report first</div><p class="mt-2 text-[13px] text-slate-500 leading-6">You have no score but you might have a file. Use annualcreditreport.com — free weekly.</p></div><div class="rounded-[20px] border bg-white p-6 shadow-sm"><div class="text-[11px] font-bold tracking-widest text-slate-400">STEP 2</div><div class="mt-2 font-bold text-[16px]">Start with credit builder</div><p class="mt-2 text-[13px] text-slate-500 leading-6">Self reports to all 3 bureaus. 6 months of on-time = +60-100 pts typical.</p></div><div class="rounded-[20px] bg-slate-900 text-white p-6"><div class="text-[11px] font-bold tracking-widest text-slate-400">STEP 3</div><div class="mt-2 font-bold text-[16px]">Then apply for small loan</div><p class="mt-2 text-[13px] text-slate-400 leading-6">After 6 months, Upstart approval odds go up 3x. Never borrow more than you can repay in 12 months.</p><a href="/#calculators" class="mt-4 inline-block px-5 py-2 rounded-full bg-emerald-500 text-white text-[12px] font-bold">Open Calculator →</a></div></div></section>
+
+        <footer class="bg-slate-900 text-slate-300 py-12">
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
+                <div><div class="flex items-center gap-2 text-white font-extrabold text-[18px]"><span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp</div><p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p></div>
+                <div class="space-y-3"><div class="font-bold text-white tracking-widest">COMPANY</div><div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div><div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div><div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div></div>
+                <div class="space-y-3"><div class="font-bold text-white tracking-widest">LEGAL</div><div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div><div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div><div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div></div>
+            </div>
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400"><p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only</p><p>Data: Experian, Equifax, CFPB • Ads labeled</p></div>
+        </footer>
+        <!-- WORKING MODAL FOR LOANS -->
+        <div id="productModal" class="fixed inset-0 z-[200] hidden">
+            <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-sm" onclick="closeProductModal()"></div>
+            <div class="relative min-h-screen flex items-center justify-center p-4">
+                <div class="w-full max-w-[520px] bg-white rounded-[24px] shadow-2xl overflow-hidden">
+                    <div class="p-6 border-b flex justify-between items-center"><div class="flex items-center gap-3"><div id="modalIcon" class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">S</div><div><div id="modalTitle" class="font-bold text-[16px]">Self Loan</div><div class="text-[12px] text-slate-500">External site • Educational info</div></div></div><button onclick="closeProductModal()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button></div>
+                    <div class="p-6">
+                        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-[12px] leading-6 text-amber-900"><b>Ad Disclosure & Safety Warning:</b> ScoreUp may earn commission. Educational only, not financial advice. Payday loans avg 391% APR per CFPB — we never recommend them. Verify APR on official site. Terms change.</div>
+                        <div id="modalDetails" class="mt-4 text-[13px] leading-6 text-slate-600">Details</div>
+                        <div class="mt-4 grid grid-cols-3 gap-3 text-[11px]"><div class="p-3 rounded-xl bg-slate-50 border text-center"><div class="text-slate-500">APR</div><div id="modalFee" class="font-bold mt-1">~15.92%</div></div><div class="p-3 rounded-xl bg-slate-50 border text-center"><div class="text-slate-500">Reports to</div><div id="modalReports" class="font-bold mt-1">All 3</div></div><div class="p-3 rounded-xl bg-slate-50 border text-center"><div class="text-slate-500">Best for</div><div id="modalBest" class="font-bold mt-1">0 history</div></div></div>
+                        <div id="modalWarning" class="hidden mt-4 p-4 rounded-xl bg-red-50 border border-red-200 text-[12px] text-red-800"></div>
+                        <div class="mt-6 flex gap-3"><button onclick="closeProductModal()" class="flex-1 h-11 rounded-full border border-slate-200 font-semibold text-[14px]">Cancel</button><a id="modalLink" href="#" target="_blank" rel="noopener sponsored" class="flex-1 h-11 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-[14px] flex items-center justify-center">Continue to official site →</a></div>
+                        <div class="mt-3 text-[10px] text-center text-slate-400">You will leave ScoreUp.com • Opens in new tab • Educational only</div>
+                    </div>
                 </div>
             </div>
-            <div class="flex items-center gap-3">
-                <span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span>
-                <a href="/#calculators" class="h-9 px-5 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center">Check Score Free</a>
-            </div>
         </div>
-    </header>
 
-    <div id="mobileMenu" class="fixed inset-0 z-[100] hidden">
-        <div id="menuOverlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
-        <div class="relative w-[300px] max-w-[85vw] h-full bg-white shadow-2xl flex flex-col">
-            <div class="h-[68px] px-5 flex items-center justify-between border-b">
-                <div class="flex items-center gap-2 font-extrabold text-[18px]">
-                    <span class="w-7 h-7 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span> ScoreUp
-                </div>
-                <button type="button" id="closeMenuBtn" onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button>
-            </div>
-            <nav class="p-4 flex flex-col gap-1">
-                <a href="/" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Home</span><span>→</span></a>
-                <a href="/Pages/Learn" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Learn</span><span>→</span></a>
-                <a href="/Pages/CreditCards" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Credit Cards</span><span>→</span></a>
-                <a href="/Pages/Loans" class="px-4 py-3 rounded-xl bg-slate-900 text-white font-medium flex justify-between"><span>Loans</span><span>→</span></a>
-                <a href="/#calculators" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Calculators</span><span>→</span></a>
-                <a href="/#reviews" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Reviews</span><span>→</span></a>
-            </nav>
-            <div class="mt-auto p-4 border-t">
-                <div class="rounded-2xl bg-emerald-50 border border-emerald-100 p-4">
-                    <div class="text-[13px] font-bold">Free Score Simulator</div>
-                    <div class="text-[12px] text-slate-500 mt-1">No email needed. FICO 10T model.</div>
-                    <a href="/#calculators" onclick="closeMenu()" class="mt-3 block h-10 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center justify-center">Check Score Free</a>
-                </div>
-                <div class="mt-4 text-[11px] text-slate-400">© 2026 ScoreUp • Educational only</div>
-            </div>
-        </div>
-    </div>
-
-    <section class="max-w-[1240px] mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-8">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-100 text-[13px] text-amber-800 mb-6">
-            <span class="bg-amber-500 text-white px-2 py-0.5 rounded-full text-[11px] font-bold">WARNING</span>
-            High-risk - Read our guide first
-        </div>
-        <h1 class="text-[34px] md:text-[48px] font-extrabold tracking-tight leading-[0.95] max-w-[720px]">
-            Loans for No Credit: <span class="text-emerald-500">What Actually Works</span> in Oct 2026
-        </h1>
-        <p class="mt-5 text-[16px] md:text-[17px] leading-7 text-slate-500 max-w-[540px]">
-            Most "no credit check" loans are traps. We reviewed CFPB complaints and found <b class="text-slate-900">3 legit options</b> that won't wreck your future score. Educational only.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-2 text-[12px]">
-            <span class="px-3 py-1.5 rounded-full bg-white border">✓ No predatory payday loans listed</span>
-            <span class="px-3 py-1.5 rounded-full bg-white border">✓ Reports to bureaus when possible</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-900 text-white">✓ CFPB complaint-checked</span>
-        </div>
-    </section>
-
-    <section class="bg-slate-50 border-y py-12">
-        <div class="max-w-[1240px] mx-auto px-5 md:px-8">
-            <h2 class="text-[24px] md:text-[28px] font-extrabold tracking-tight">Best Options When You Have No History</h2>
-            <p class="mt-2 text-[13px] text-slate-500">We do NOT recommend payday or title loans. Ever.</p>
-            <div class="mt-6 rounded-[20px] bg-white border overflow-hidden shadow-sm">
-                <table class="w-full text-[13px]">
-                    <thead class="bg-slate-50 text-[11px] text-slate-500 tracking-widest">
-                        <tr><th class="text-left p-4">PRODUCT</th><th class="text-left">BEST FOR</th><th>APR RANGE</th><th>REPORTS?</th><th class="text-right p-4">ACTION</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-t bg-emerald-50/40">
-                            <td class="p-4">
-                                <div class="font-bold">Self - Credit Builder Loan <span class="ml-2 bg-slate-900 text-white text-[10px] px-2 py-0.5 rounded-full">Editor's Pick</span></div>
-                                <div class="text-[11px] text-slate-500 mt-1">Builds savings + credit history</div>
-                            </td>
-                            <td>Building from 0</td>
-                            <td>~15.92%</td>
-                            <td><span class="px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold">Yes - All 3</span></td>
-                            <td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-emerald-500 text-white text-[12px] font-bold">Learn More</a></td>
-                        </tr>
-                        <tr class="border-t">
-                            <td class="p-4">
-                                <div class="font-bold">Upstart</div>
-                                <div class="text-[11px] text-slate-500 mt-1">Uses education + job history</div>
-                            </td>
-                            <td>Thin file</td>
-                            <td>7.4% - 35.99%</td>
-                            <td><span class="px-2 py-1 rounded-full bg-slate-50 text-slate-700 text-[11px]">Yes</span></td>
-                            <td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[12px]">Check Rate</a></td>
-                        </tr>
-                        <tr class="border-t">
-                            <td class="p-4">
-                                <div class="font-bold">Oportun</div>
-                                <div class="text-[11px] text-slate-500 mt-1">No credit history required</div>
-                            </td>
-                            <td>No history at all</td>
-                            <td>18% - 35.99%</td>
-                            <td><span class="px-2 py-1 rounded-full bg-slate-50 text-slate-700 text-[11px]">Yes</span></td>
-                            <td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[12px]">Check Rate</a></td>
-                        </tr>
-                        <tr class="border-t bg-red-50/50">
-                            <td class="p-4">
-                                <div class="font-bold text-red-700">AVOID: Payday Loans</div>
-                                <div class="text-[11px] text-red-600/70 mt-1">CFPB avg APR 391% - traps beginners</div>
-                            </td>
-                            <td class="text-red-700">Nobody</td>
-                            <td class="text-red-700 font-bold">~391%</td>
-                            <td><span class="px-2 py-1 rounded-full bg-red-100 text-red-700 text-[11px] font-bold">Often No</span></td>
-                            <td class="text-right p-4"><span class="px-4 py-1.5 rounded-full bg-slate-200 text-slate-500 text-[12px]">Do Not Use</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="mt-6 p-5 rounded-2xl bg-amber-50 border border-amber-200 text-[12px] leading-6">
-                <b class="text-amber-900">⚠ Educational Warning (CFPB Data):</b> <span class="text-amber-800">Payday loans have an average fee of $15 per $100 borrowed, which equals 391% APR. 80% are rolled over. We never recommend them for building credit. Build with Self or secured cards first.</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-[1240px] mx-auto px-5 md:px-8 py-12">
-        <h2 class="text-[24px] font-extrabold">How to get your first loan safely - 3 steps</h2>
-        <div class="mt-6 grid md:grid-cols-3 gap-6">
-            <div class="rounded-[20px] border bg-white p-6 shadow-sm">
-                <div class="text-[11px] font-bold tracking-widest text-slate-400">STEP 1</div>
-                <div class="mt-2 font-bold text-[16px]">Check your report first</div>
-                <p class="mt-2 text-[13px] text-slate-500 leading-6">You have no score but you might have a file. Use annualcreditreport.com — free weekly.</p>
-            </div>
-            <div class="rounded-[20px] border bg-white p-6 shadow-sm">
-                <div class="text-[11px] font-bold tracking-widest text-slate-400">STEP 2</div>
-                <div class="mt-2 font-bold text-[16px]">Start with credit builder</div>
-                <p class="mt-2 text-[13px] text-slate-500 leading-6">Self reports to all 3 bureaus. 6 months of on-time = +60-100 pts typical.</p>
-            </div>
-            <div class="rounded-[20px] bg-slate-900 text-white p-6">
-                <div class="text-[11px] font-bold tracking-widest text-slate-400">STEP 3</div>
-                <div class="mt-2 font-bold text-[16px]">Then apply for small loan</div>
-                <p class="mt-2 text-[13px] text-slate-400 leading-6">After 6 months, Upstart approval odds go up 3x. Never borrow more than you can repay in 12 months.</p>
-                <a href="/#calculators" class="mt-4 inline-block px-5 py-2 rounded-full bg-emerald-500 text-white text-[12px] font-bold">Open Calculator →</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-300 py-12">
-        <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
-            <div>
-                <div class="flex items-center gap-2 text-white font-extrabold text-[18px]">
-                    <span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp
-                </div>
-                <p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p>
-            </div>
-            <div class="space-y-3">
-                <div class="font-bold text-white tracking-widest">COMPANY</div>
-                <div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div>
-                <div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div>
-                <div><a href="/Pages/About#editorial" class="hover:text-white hover:underline">Editorial policy</a></div>
-                <div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div>
-            </div>
-            <div class="space-y-3">
-                <div class="font-bold text-white tracking-widest">LEGAL</div>
-                <div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div>
-                <div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div>
-                <div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div>
-            </div>
-        </div>
-        <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400">
-            <p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only • <a href="/Pages/About" class="underline hover:text-white">About</a> • <a href="/Pages/Privacy" class="underline hover:text-white">Privacy Policy</a> • <a href="/Pages/Contact" class="underline hover:text-white">Contact</a></p>
-            <p>Data: Experian, Equifax, CFPB • Ads labeled</p>
-        </div>
-    </footer>
-
-    <script>
-        function openMenu(){
-        const m = document.getElementById('mobileMenu');
-        if(m){ m.classList.remove('hidden'); document.body.classList.add('no-scroll'); }
-        }
-        function closeMenu(){
-        const m = document.getElementById('mobileMenu');
-        if(m){ m.classList.add('hidden'); document.body.classList.remove('no-scroll'); }
-        }
-        document.addEventListener('DOMContentLoaded', function(){
-        const closeBtn = document.getElementById('closeMenuBtn');
-        const overlay = document.getElementById('menuOverlay');
-        if(closeBtn) closeBtn.addEventListener('click', closeMenu);
-        if(overlay) overlay.addEventListener('click', closeMenu);
-        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
-        });
-    </script>
-
-</body>
+        <script>
+            const products = {
+            self_loan: { title: 'Self - Credit Builder Loan', icon: 'S', fee: '~15.92% APR', reports: 'All 3 bureaus', best: 'Building from 0', details: 'You make small monthly payments into a locked savings account that reports as installment loan to all 3 bureaus. At end, you get savings back minus fees and interest. No hard pull to check eligibility. Best starting point for 0 history. Reports to Experian, Equifax, TransUnion.', url: 'https://www.self.inc/', warning: '' },
+            upstart: { title: 'Upstart Personal Loan', icon: 'U', fee: '7.4% - 35.99% APR', reports: 'Yes - 1+ bureau', best: 'Thin file', details: 'Uses AI that considers education and job history, not just credit score. Good for thin files. Check rate with no impact to credit. Origination fee may apply. Minimum credit score not required but income required.', url: 'https://www.upstart.com/', warning: '' },
+            oportun: { title: 'Oportun Personal Loan', icon: 'O', fee: '18% - 35.99% APR', reports: 'Yes', best: 'No history at all', details: 'No credit history required. Considers other data. Secured and unsecured options. Reports to credit bureaus to help build. Available in select states. No prepayment penalty.', url: 'https://www.oportun.com/', warning: '' },
+            payday_warning: { title: 'AVOID: Payday Loans - CFPB Warning', icon: '!', fee: '~391% APR avg', reports: 'Often No', best: 'Nobody', details: 'CFPB data: Average fee $15 per $100 borrowed = 391% APR. 80% are rolled over or followed by another loan within 14 days. Does NOT build credit in most cases. Traps beginners in debt cycle. We never list or recommend them.', url: 'https://www.consumerfinance.gov/ask-cfpb/what-is-a-payday-loan-en-403/', warning: 'DO NOT USE: Payday loans trap 80% of borrowers. If you need cash now, call 211 or visit local credit union for small-dollar loan. Link goes to CFPB educational page, not a lender.' }
+            };
+            function openProductModal(key){
+            const p = products[key]; if(!p) return;
+            document.getElementById('modalTitle').innerText = p.title;
+            document.getElementById('modalIcon').innerText = p.icon;
+            document.getElementById('modalFee').innerText = p.fee;
+            document.getElementById('modalReports').innerText = p.reports;
+            document.getElementById('modalBest').innerText = p.best;
+            document.getElementById('modalDetails').innerText = p.details;
+            document.getElementById('modalLink').href = p.url;
+            const warn = document.getElementById('modalWarning');
+            if(p.warning){ warn.innerText = p.warning; warn.classList.remove('hidden'); document.getElementById('modalLink').innerText = 'Learn at CFPB.gov →'; document.getElementById('modalLink').className = 'flex-1 h-11 rounded-full bg-slate-900 hover:bg-black text-white font-semibold text-[14px] flex items-center justify-center'; }
+            else { warn.classList.add('hidden'); document.getElementById('modalLink').innerText = 'Continue to official site →'; document.getElementById('modalLink').className = 'flex-1 h-11 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-[14px] flex items-center justify-center'; }
+            document.getElementById('productModal').classList.remove('hidden');
+            document.body.classList.add('no-scroll');
+            }
+            function closeProductModal(){ document.getElementById('productModal').classList.add('hidden'); document.body.classList.remove('no-scroll'); }
+            function openMenu(){ const m=document.getElementById('mobileMenu'); if(m){m.classList.remove('hidden'); document.body.classList.add('no-scroll');} }
+            function closeMenu(){ const m=document.getElementById('mobileMenu'); if(m){m.classList.add('hidden'); document.body.classList.remove('no-scroll');} }
+            document.addEventListener('DOMContentLoaded', function(){
+            const closeBtn=document.getElementById('closeMenuBtn'); const overlay=document.getElementById('menuOverlay');
+            if(closeBtn) closeBtn.addEventListener('click', closeMenu); if(overlay) overlay.addEventListener('click', closeMenu);
+            document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); closeProductModal(); } });
+            });
+        </script>
+    </body>
 </html>

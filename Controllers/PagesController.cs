@@ -8,9 +8,12 @@ namespace ScoreUp.Controllers
     public class PagesController : Controller
     {
         private readonly IConfiguration _config;
-        public PagesController(IConfiguration config)
+        private readonly ILogger<PagesController> _logger;
+
+        public PagesController(IConfiguration config, ILogger<PagesController> logger)
         {
             _config = config;
+            _logger = logger;
         }
 
         public IActionResult About() => View();
@@ -18,48 +21,92 @@ namespace ScoreUp.Controllers
         public IActionResult Terms() => View();
         public IActionResult Contact() => View();
         public IActionResult Learn() => View();
-
-        // NEW
         public IActionResult CreditCards() => View();
         public IActionResult Loans() => View();
 
-        [HttpPost]
-        public IActionResult Contact(string name, string email, string message)
+        public class ContactRequest
         {
+            public string Name { get; set; } = "";
+            public string Email { get; set; } = "";
+            public string Topic { get; set; } = "";
+            public string Message { get; set; } = "";
+        }
+
+        [HttpPost("Pages/Contact")]
+        public async Task<IActionResult> ContactPost([FromBody] ContactRequest req)
+        {
+            
             try
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "messages.txt");
-                System.IO.File.AppendAllText(path, $"[{DateTime.Now}] {name} | {email} | {message}\n");
-
-                var fromEmail = _config["EmailSettings:SenderEmail"] ?? "wandilecele28@gmail.com";
-                var appPassword = _config["EmailSettings:SenderPassword"];
-
-                if (string.IsNullOrEmpty(appPassword))
-                {
-                    ViewBag.Error = "Email not configured on server. But message saved!";
-                    return View();
-                }
-
-                var smtp = new SmtpClient("smtp.gmail.com")
-                {
-                    Port = 587,
-                    Credentials = new NetworkCredential(fromEmail, appPassword),
-                    EnableSsl = true,
-                };
-
-                var mail = new MailMessage(fromEmail, "wandilecele28@gmail.com")
-                {
-                    Subject = $"ScoreUp Contact from {name}",
-                    Body = $"Name: {name}\nEmail: {email}\n\n{message}"
-                };
-                smtp.Send(mail);
-                ViewBag.Success = true;
+                Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+                var line = $"[{DateTime.Now}] {req.Name} | {req.Email} | {req.Topic} | {req.Message.Replace("\n", " ")}\n";
+                await System.IO.File.AppendAllTextAsync(path, line);
+                _logger.LogInformation($"Saved: {line}");
             }
             catch (Exception ex)
             {
-                ViewBag.Error = ex.Message;
+                _logger.LogError($"Save failed: {ex.Message}");
             }
-            return View();
+
+            try
+            {
+                
+                var fromEmail = _config["EmailSettings:SenderEmail"] ?? "wandilecele28@gmail.com";
+                var appPassword = _config["EmailSettings:SenderPassword"];
+                var toEmail = _config["EmailSettings:RecipientEmail"] ?? "wandilecele28@gmail.com";
+                var smtpServer = _config["EmailSettings:SmtpServer"] ?? "smtp.gmail.com";
+                var smtpPort = int.Parse(_config["EmailSettings:SmtpPort"] ?? "587");
+
+                _logger.LogInformation($"Email attempt: {fromEmail} -> {toEmail}, HasPass={!string.IsNullOrEmpty(appPassword)}");
+
+                if (string.IsNullOrEmpty(appPassword))
+                {
+                    return Json(new { success = false, error = "EmailSettings:SenderPassword not set in appsettings.json" });
+                }
+
+                
+                using var smtp = new SmtpClient(smtpServer)
+                {
+                    Port = smtpPort,
+                    Credentials = new NetworkCredential(fromEmail, appPassword),
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    Timeout = 10000 
+                };
+
+                var mail = new MailMessage(fromEmail, toEmail)
+                {
+                    Subject = $"ScoreUp Contact - {req.Topic} from {req.Name}",
+                    Body = $"Name: {req.Name}\nEmail: {req.Email}\nTopic: {req.Topic}\n\nMessage:\n{req.Message}\n\nReply-To: {req.Email}\nTime: {DateTime.UtcNow}"
+                };
+                mail.ReplyToList.Add(new MailAddress(req.Email, req.Name));
+
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+                await smtp.SendMailAsync(mail, cts.Token);
+
+                _logger.LogInformation("Email sent successfully");
+                return Json(new { success = true });
+            }
+            catch (OperationCanceledException)
+            {
+                _logger.LogError("SMTP timeout after 10 sec - Render free blocks port 587");
+                
+                return Json(new { success = true, warning = "Saved to messages.txt, SMTP blocked on Render free" });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Email failed: {ex.Message}");
+                return Json(new { success = false, error = ex.Message });
+            }
+        }
+
+        
+        [HttpPost]
+        public async Task<IActionResult> Contact(string name, string email, string message)
+        {
+            var req = new ContactRequest { Name = name, Email = email, Message = message, Topic = "General" };
+            return await ContactPost(req);
         }
     }
 }

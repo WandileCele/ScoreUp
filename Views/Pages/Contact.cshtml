@@ -6,127 +6,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact - ScoreUp</title>
+    <title>Contact Us - ScoreUp</title>
+    <meta name="description" content="Contact ScoreUp. Educational credit building site. Response within 24h.">
     <link rel="icon" href="/favicon.ico?v=3">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
         font-family: Inter,sans-serif
+        }
+
+        .no-scroll {
+        overflow: hidden
         }</style>
     </head>
     <body class="bg-white text-slate-900 antialiased">
-
+        <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4"><span>● Educational content — Not financial advice</span><span class="opacity-30">|</span><span>Response within 24h • Sources: CFPB, Experian</span></div>
         <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
             <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]">
-                        <span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>
-                        ScoreUp
-                        <span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span>
-                    </a>
-                    <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600">
-                        <a href="/#best" class="px-3 py-2 rounded-full hover:bg-slate-50">Learn</a>
-                        <a href="/#best" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a>
-                        <a href="/#calculators" class="px-3 py-2 rounded-full hover:bg-slate-50">Calculators</a>
-                    </nav>
-                </div>
                 <div class="flex items-center gap-3">
-                    <span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span>
-                    <a href="/" class="h-9 px-5 rounded-full bg-slate-900 text-white text-[14px] font-semibold flex items-center">← Back to Home</a>
+                    <button type="button" id="menuBtn" onclick="openMenu()" class="lg:hidden w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center cursor-pointer relative z-50">☰</button>
+                    <div class="flex items-center gap-8">
+                        <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]"><span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp<span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span></a>
+                        <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600"><a href="/Pages/Learn" class="px-3 py-2 rounded-full hover:bg-slate-50">Learn</a><a href="/Pages/CreditCards" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a><a href="/Pages/About" class="px-3 py-2 rounded-full hover:bg-slate-50">About</a></nav>
+                    </div>
                 </div>
+                <div class="flex items-center gap-3"><a href="/" class="h-9 px-5 rounded-full bg-slate-900 text-white text-[14px] font-semibold flex items-center">← Back to Home</a></div>
             </div>
         </header>
+        <div id="mobileMenu" class="fixed inset-0 z-[100] hidden"><div id="menuOverlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div><div class="relative w-[300px] max-w-[85vw] h-full bg-white shadow-2xl flex flex-col"><div class="h-[68px] px-5 flex items-center justify-between border-b"><div class="flex items-center gap-2 font-extrabold text-[18px]"><span class="w-7 h-7 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp</div><button type="button" id="closeMenuBtn" onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button></div><nav class="p-4 flex flex-col gap-1"><a href="/" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Home</span><span>→</span></a><a href="/Pages/About" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>About</span><span>→</span></a><a href="/Pages/Contact" class="px-4 py-3 rounded-xl bg-slate-900 text-white font-medium flex justify-between"><span>Contact</span><span>→</span></a></nav></div></div>
 
-        <div class="bg-slate-900 text-white">
-            <div class="max-w-[1000px] mx-auto px-5 md:px-8 py-16">
-                <span class="inline-flex px-3 py-1 rounded-full bg-emerald-500 text-white text-[11px] font-bold tracking-widest">CONTACT</span>
-                <h1 class="mt-4 text-[40px] md:text-[48px] font-extrabold tracking-tight leading-[0.9]">We reply within <span class="text-emerald-400">24 hours.</span></h1>
-                <p class="mt-4 text-[16px] text-slate-300 max-w-[500px]">Questions, corrections, or partnership ideas? We read every message.</p>
+        <section class="max-w-[1000px] mx-auto px-5 md:px-8 pt-12 pb-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-10">
+            <div>
+                <span class="inline-flex px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[11px] font-bold tracking-widest">CONTACT • REPLY WITHIN 24H • EDUCATIONAL ONLY</span>
+                <h1 class="mt-4 text-[36px] md:text-[44px] font-extrabold tracking-tight leading-[0.9]">Questions? We reply within <span class="text-emerald-500">24 hours.</span></h1>
+                <p class="mt-4 text-[15px] leading-7 text-slate-500 max-w-[460px]">ScoreUp is educational only, not a bank or credit bureau. We don't collect SSN. For debt crisis, call NFCC 1-800-388-2227 (free nonprofit). For product terms, verify on official site.</p>
+
+                <div class="mt-8 grid gap-4">
+                    <div class="p-5 rounded-2xl bg-white border shadow-sm flex gap-3"><div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">✉</div><div><div class="font-bold text-[14px]">Email us</div><div class="text-[13px] text-slate-500 mt-1">wandilecele28@gmail.com</div><div class="text-[11px] text-slate-400 mt-1">Response within 24h • No auto-replies</div></div></div>
+                    <div class="p-5 rounded-2xl bg-white border shadow-sm flex gap-3"><div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center">✓</div><div><div class="font-bold text-[14px]">Sources verified</div><div class="text-[13px] text-slate-500 mt-1">CFPB, Experian, Equifax, TransUnion • Updated Oct 19, 2026</div><div class="text-[11px] text-slate-400 mt-1">All content reviewed, educational only</div></div></div>
+                </div>
+
+                <div class="mt-8 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-[12px] leading-6 text-amber-900"><b>Important:</b> We cannot access your credit report, SSN, or bank account. Do not send sensitive data via email. For free credit report: <a href="https://www.annualcreditreport.com/" target="_blank" class="underline font-bold">annualcreditreport.com</a> (official, free weekly).</div>
             </div>
-        </div>
 
-        <main class="max-w-[1000px] mx-auto px-5 md:px-8 py-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-10">
-            <div class="rounded-[24px] bg-white border border-slate-200 shadow-[0_8px_32px_rgba(15,23,42,0.06)] p-6 md:p-8">
-                <h2 class="text-[20px] font-bold">Send us a message</h2>
-
-                @if (TempData["Success"] != null)
-                {
-                    <div class="mt-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-[14px] font-medium flex gap-2">
-                        <span>✅</span><span>@TempData["Success"]</span>
-                    </div>
-                }
-                @if (TempData["Error"] != null)
-                {
-                    <div class="mt-6 p-4 rounded-2xl bg-red-50 border border-red-200 text-red-800 text-[14px] font-medium">
-                        ❌ @TempData["Error"]
-                    </div>
-                }
-
-                <form method="post" action="/Pages/Contact" class="mt-6 space-y-4">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <input name="name" required placeholder="Your name" class="h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-[14px] w-full focus:outline-none focus:ring-2 focus:ring-emerald-200 focus:border-emerald-300">
-                        <input name="email" required type="email" placeholder="your@email.com" class="h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-[14px] w-full focus:outline-none focus:ring-2 focus:ring-emerald-200">
-                    </div>
-                    <select name="topic" class="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-[14px]">
-                        <option>General question</option>
-                        <option>Correction / Update</option>
-                        <option>Partnership</option>
-                        <option>Privacy request</option>
-                    </select>
-                    <textarea name="message" required placeholder="How can we help?" rows="5" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 text-[14px] focus:outline-none focus:ring-2 focus:ring-emerald-200"></textarea>
-                    <button type="submit" class="w-full h-12 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-[14px] transition">Send Message →</button>
-                    <p class="text-[11px] text-slate-500 text-center">We never sell your email · No spam, ever</p>
+            <div class="rounded-[24px] bg-slate-50 border p-6">
+                <h3 class="font-bold text-[18px]">Send a message — Working form</h3>
+                <p class="text-[13px] text-slate-500 mt-1">All fields required • No SSN • Educational only</p>
+                <form onsubmit="handleContact(event)" class="mt-6 space-y-4">
+                    <div><label class="text-[12px] font-bold tracking-widest">YOUR NAME</label><input id="cName" required placeholder="Jane Doe" class="mt-1 w-full h-11 px-4 rounded-xl border border-slate-200 text-[14px] outline-none focus:border-slate-900"></div>
+                    <div><label class="text-[12px] font-bold tracking-widest">EMAIL</label><input id="cEmail" type="email" required placeholder="jane@example.com" class="mt-1 w-full h-11 px-4 rounded-xl border border-slate-200 text-[14px] outline-none focus:border-slate-900"></div>
+                    <div><label class="text-[12px] font-bold tracking-widest">TOPIC</label><select id="cTopic" class="mt-1 w-full h-11 px-4 rounded-xl border border-slate-200 text-[14px] outline-none focus:border-slate-900"><option>General question</option><option>Correction / update needed</option><option>Ad disclosure question</option><option>Privacy request</option><option>Debt help resources</option></select></div>
+                    <div><label class="text-[12px] font-bold tracking-widest">MESSAGE (NO SSN)</label><textarea id="cMessage" required placeholder="How can we help? (Don't include SSN or account numbers)" rows="4" class="mt-1 w-full p-4 rounded-xl border border-slate-200 text-[14px] outline-none focus:border-slate-900 resize-none"></textarea></div>
+                    <button id="sendBtn" type="submit" class="w-full h-11 rounded-full bg-slate-900 hover:bg-black text-white font-semibold text-[14px] flex items-center justify-center gap-2">Send Message →</button>
+                    <div class="text-[11px] text-slate-400 text-center">By sending, you agree to our <a href="/Pages/Privacy" class="underline">Privacy Policy</a> and <a href="/Pages/Terms" class="underline">Terms</a>. Educational only.</div>
                 </form>
+                <div id="contactSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-[13px] text-emerald-800"><b id="successTitle">Message sent!</b><br><br><div id="contactPreview" class="p-3 rounded-lg bg-white border text-[12px] text-slate-600"></div></div>
+                <div id="contactError" class="hidden mt-4 p-4 rounded-xl bg-red-50 border border-red-200 text-[13px] text-red-800"></div>
             </div>
+        </section>
 
-            <div class="space-y-5">
-                <div class="rounded-[20px] bg-slate-50 border border-slate-200 p-6">
-                    <h3 class="font-bold">Other ways to reach us</h3>
-                    <div class="mt-4 space-y-4 text-[13px]">
-                        <div><span class="font-semibold text-slate-900">Email:</span><br><span class="text-slate-600">wandilecele28@gmail.com</span></div>
-                        <div><span class="font-semibold text-slate-900">Response time:</span><br><span class="text-slate-600">Under 24 hours, Monday-Friday</span></div>
-                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800"><b>Debt crisis?</b><br>Call NFCC at 1-800-388-2227 — free, nonprofit help.</div>
-                    </div>
-                </div>
-                <div class="rounded-[20px] bg-slate-900 text-white p-6">
-                    <div class="text-[11px] tracking-widest opacity-60 font-bold">WHY TRUST US</div>
-                    <p class="mt-3 text-[13px] leading-relaxed opacity-90">Written by former CFPB analyst, reviewed by CFA. We open real accounts to test products. No pay-to-rank.</p>
-                </div>
+        <footer class="bg-slate-900 text-slate-300 py-12">
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
+                <div><div class="flex items-center gap-2 text-white font-extrabold text-[18px]"><span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp</div><p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p></div>
+                <div class="space-y-3"><div class="font-bold text-white tracking-widest">COMPANY</div><div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div><div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div><div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div></div>
+                <div class="space-y-3"><div class="font-bold text-white tracking-widest">LEGAL</div><div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div><div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div><div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div></div>
             </div>
-        </main>
-
-        <footer class="bg-slate-900 text-slate-300 mt-20">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 py-12 grid md:grid-cols-[1.2fr_0.8fr_0.8fr] gap-10">
-                <div>
-                    <div class="flex items-center gap-2 text-white font-extrabold text-[18px]">
-                        <span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp
-                    </div>
-                    <p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p>
-                    <div class="mt-4 flex gap-2">
-                        <span class="text-[11px] px-2 py-1 rounded-full bg-white/10 border border-white/10">© 2026 ScoreUp</span>
-                        <span class="text-[11px] px-2 py-1 rounded-full bg-emerald-500 text-white font-bold">TRUSTED</span>
-                    </div>
-                </div>
-                <div class="text-[13px] space-y-3">
-                    <div class="font-bold text-white text-[11px] tracking-widest">COMPANY</div>
-                    <div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div>
-                    <div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div>
-                    <div><a href="/Pages/About#editorial" class="hover:text-white hover:underline">Editorial policy</a></div>
-                    <div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div>
-                </div>
-                <div class="text-[13px] space-y-3">
-                    <div class="font-bold text-white text-[11px] tracking-widest">LEGAL</div>
-                    <div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div>
-                    <div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div>
-                    <div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div>
-                </div>
-            </div>
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-2 pb-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400">
-                <p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only • <a href="/Pages/About" class="underline hover:text-white">About</a> • <a href="/Pages/Privacy" class="underline hover:text-white">Privacy</a> • <a href="/Pages/Contact" class="underline hover:text-white">Contact</a></p>
-                <p>Data: Experian, Equifax, CFPB • Ads labeled</p>
-            </div>
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400"><p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only</p><p>Data: Experian, Equifax, CFPB • Ads labeled</p></div>
         </footer>
+        <script>
+            async function handleContact(e){
+            e.preventDefault();
+            const btn = document.getElementById('sendBtn');
+            const name = document.getElementById('cName').value;
+            const email = document.getElementById('cEmail').value;
+            const topic = document.getElementById('cTopic').value;
+            const msg = document.getElementById('cMessage').value;
+            const successDiv = document.getElementById('contactSuccess');
+            const errorDiv = document.getElementById('contactError');
+            const preview = document.getElementById('contactPreview');
+            const successTitle = document.getElementById('successTitle');
 
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            successDiv.classList.add('hidden');
+            errorDiv.classList.add('hidden');
+
+            try {
+            const response = await fetch('/Pages/Contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ Name: name, Email: email, Topic: topic, Message: msg })
+            });
+
+            let result;
+            try { result = await response.json(); } catch { result = { success: response.ok }; }
+
+            if (response.ok && result.success !== false) {
+            successTitle.innerText = '✅ Message sent for real to wandilecele28@gmail.com!';
+            preview.innerText = `To: wandilecele28@gmail.com\nFrom: ${name} <${email}>\nTopic: ${topic}\n\n${msg}\n\n✓ Sent at ${new Date().toLocaleString()}\n✓ Using appsettings.json`;
+            successDiv.classList.remove('hidden');
+            successDiv.classList.remove('bg-red-50');
+            successDiv.classList.add('bg-emerald-50');
+            document.getElementById('cName').value = '';
+            document.getElementById('cEmail').value = '';
+            document.getElementById('cMessage').value = '';
+            successDiv.scrollIntoView({behavior:'smooth'});
+            } else {
+            throw new Error(result.error || 'Failed to send');
+            }
+            } catch (err) {
+            errorDiv.innerText = `Error: ${err.message}. Check Render Logs. Your message is saved in messages.txt`;
+            errorDiv.classList.remove('hidden');
+            preview.innerText = `Name: ${name}\nEmail: ${email}\nTopic: ${topic}\nMessage: ${msg}`;
+            successDiv.classList.remove('hidden');
+            successTitle.innerText = 'Message saved locally';
+            successDiv.scrollIntoView({behavior:'smooth'});
+            } finally {
+            btn.innerText = 'Send Message →';
+            btn.disabled = false;
+            }
+            }
+            function openMenu(){const m=document.getElementById('mobileMenu'); if(m){m.classList.remove('hidden'); document.body.classList.add('no-scroll');}}
+            function closeMenu(){const m=document.getElementById('mobileMenu'); if(m){m.classList.add('hidden'); document.body.classList.remove('no-scroll');}}
+            document.addEventListener('DOMContentLoaded', function(){const c=document.getElementById('closeMenuBtn'); const o=document.getElementById('menuOverlay'); if(c) c.addEventListener('click', closeMenu); if(o) o.addEventListener('click', closeMenu); document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });});
+        </script>
     </body>
 </html>

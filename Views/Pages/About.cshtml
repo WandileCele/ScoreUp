@@ -6,145 +6,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - ScoreUp | How We Make Money & Editorial Policy</title>
+    <meta name="description" content="About ScoreUp: independent educational site helping beginners build credit from 0 to 700. How we make money, editorial policy, ad disclosure. Sources: CFPB, Experian, Equifax.">
     <link rel="icon" href="/favicon.ico?v=3">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
         font-family: Inter,sans-serif
+        }
+
+        .no-scroll {
+        overflow: hidden
         }</style>
     </head>
     <body class="bg-white text-slate-900 antialiased">
-
-        <title>About Us - ScoreUp</title>
-
+        <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4"><span>● Educational content — Not financial advice</span><span class="opacity-30">|</span><span>Updated Oct 19, 2026 · Sources: CFPB, Experian, Equifax</span></div>
         <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
             <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]">
-                        <span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>
-                        ScoreUp
-                        <span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span>
-                    </a>
-                    <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600">
-                        <a href="/#best" class="px-3 py-2 rounded-full hover:bg-slate-50">Learn</a>
-                        <a href="/#best" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a>
-                        <a href="/#calculators" class="px-3 py-2 rounded-full hover:bg-slate-50">Calculators</a>
-                    </nav>
-                </div>
                 <div class="flex items-center gap-3">
-                    <span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span>
-                    <a href="/" class="h-9 px-5 rounded-full bg-slate-900 text-white text-[14px] font-semibold flex items-center">← Back to Home</a>
+                    <button type="button" id="menuBtn" onclick="openMenu()" class="lg:hidden w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center cursor-pointer relative z-50">☰</button>
+                    <div class="flex items-center gap-8">
+                        <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]"><span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp<span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span></a>
+                        <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600">
+                            <a href="/Pages/Learn" class="px-3 py-2 rounded-full hover:bg-slate-50">Learn</a>
+                            <a href="/Pages/CreditCards" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a>
+                            <a href="/Pages/Loans" class="px-3 py-2 rounded-full hover:bg-slate-50">Loans</a>
+                            <a href="/#calculators" class="px-3 py-2 rounded-full hover:bg-slate-50">Calculators</a>
+                        </nav>
+                    </div>
                 </div>
+                <div class="flex items-center gap-3"><span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Sources: CFPB, Experian, Equifax</span><a href="/" class="h-9 px-5 rounded-full bg-slate-900 text-white text-[14px] font-semibold flex items-center">← Back to Home</a></div>
             </div>
         </header>
+        <div id="mobileMenu" class="fixed inset-0 z-[100] hidden"><div id="menuOverlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div><div class="relative w-[300px] max-w-[85vw] h-full bg-white shadow-2xl flex flex-col"><div class="h-[68px] px-5 flex items-center justify-between border-b"><div class="flex items-center gap-2 font-extrabold text-[18px]"><span class="w-7 h-7 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp</div><button type="button" id="closeMenuBtn" onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button></div><nav class="p-4 flex flex-col gap-1"><a href="/" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Home</span><span>→</span></a><a href="/Pages/Learn" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Learn</span><span>→</span></a><a href="/Pages/About" class="px-4 py-3 rounded-xl bg-slate-900 text-white font-medium flex justify-between"><span>About Us</span><span>→</span></a></nav></div></div>
 
-        <div class="bg-slate-900 text-white">
-            <div class="max-w-[1000px] mx-auto px-5 md:px-8 py-16">
-                <span class="inline-flex px-3 py-1 rounded-full bg-emerald-500 text-white text-[11px] font-bold tracking-widest">ABOUT SCOREUP</span>
-                <h1 class="mt-4 text-[40px] md:text-[52px] font-extrabold tracking-tight leading-[0.9]">We help beginners build credit from <span class="text-emerald-400">0 to 700.</span></h1>
-                <p class="mt-5 text-[17px] text-slate-300 max-w-[600px] leading-relaxed">No hype, no pay-to-rank. Just honest reviews and free calculators used by 250k+ beginners.</p>
-            </div>
-        </div>
+        <div class="bg-slate-900 text-white"><div class="max-w-[1000px] mx-auto px-5 md:px-8 py-16"><span class="inline-flex px-3 py-1 rounded-full bg-emerald-500 text-white text-[11px] font-bold tracking-widest">ABOUT SCOREUP • EST. 2024 • UPDATED OCT 2026</span><h1 class="mt-4 text-[40px] md:text-[52px] font-extrabold tracking-tight leading-[0.9]">We help beginners build credit from <span class="text-emerald-400">0 to 700.</span></h1><p class="mt-5 text-[17px] text-slate-300 max-w-[600px] leading-relaxed">No hype, no pay-to-rank. Just honest reviews and free calculators used by 250k+ beginners. Educational only, not financial advice.</p></div></div>
+
         <main class="max-w-[1000px] mx-auto px-5 md:px-8 py-12">
             <div class="grid lg:grid-cols-[1fr_300px] gap-10">
                 <div class="space-y-12">
                     <section>
-                        <h2 class="text-[28px] font-extrabold tracking-tight">Who we are</h2>
-                        <p class="mt-4 text-[15px] leading-7 text-slate-600">ScoreUp is an independent educational site founded to help people with no credit history. We are <b class="text-slate-900">not a bank, not a credit bureau, and not a financial advisor</b>. We are former CFPB analysts and nonprofit credit counselors who were tired of affiliate-first rankings.</p>
-                        <div class="mt-6 flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-200 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
-                            <div class="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">AS</div>
-                            <div class="text-[13px]"><b class="text-slate-900">Amanda S. — Former CFPB Analyst</b><br><span class="text-slate-500">Lead Writer, 8 years credit education · Reviewed by Dr. James L., CFA</span></div>
-                            <div class="ml-auto hidden md:block px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold border">E-E-A-T VERIFIED</div>
+                        <h2 class="text-[28px] font-extrabold tracking-tight">Who we are — Independent, real sources</h2>
+                        <p class="mt-4 text-[15px] leading-7 text-slate-600">ScoreUp is an independent educational site. We are <b class="text-slate-900">not a bank, not a credit bureau, and not a financial advisor</b>. We research public data from CFPB, Experian, Equifax, TransUnion and turn it into simple guides.</p>
+                        <div class="mt-6 p-5 rounded-2xl bg-white border border-slate-200 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">SE</div>
+                                <div class="text-[13px]"><b class="text-slate-900">ScoreUp Editorial Team</b><br><span class="text-slate-500">Independent researchers • Sources: CFPB, Experian, Equifax, TransUnion • Updated Oct 19, 2026 • Educational only</span></div>
+                                <div class="ml-auto hidden md:block px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold border">VERIFIED SOURCES</div>
+                            </div>
+                            <div class="mt-4 p-3 rounded-xl bg-slate-50 border text-[12px] leading-6 text-slate-600"><b>Our methodology:</b> We check CFPB complaint database for hidden fees, verify reporting to 3 bureaus via Experian/Equifax docs, and test approval with $0 history. No product pays for ranking.</div>
                         </div>
                     </section>
-
-                    <section id="how-we-make-money" class="scroll-mt-24">
-                        <div class="inline-flex px-3 py-1 rounded-full bg-amber-400 text-slate-900 text-[11px] font-bold tracking-widest">TRANSPARENCY</div>
-                        <h2 class="mt-3 text-[28px] font-extrabold tracking-tight">How We Make Money</h2>
-                        <p class="mt-4 text-[15px] leading-7 text-slate-600">ScoreUp is free for readers. We make money in two ways, fully disclosed:</p>
-                        <div class="mt-6 grid gap-4">
-                            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-                                <h3 class="font-bold text-slate-900 flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[12px]">1</span> Affiliate Commissions</h3>
-                                <p class="mt-2 text-[14px] leading-6 text-slate-600">When you apply for Self, Chime, or Kikoff through our links, we may earn commission. No extra cost to you. We would recommend these products even without commission.</p>
-                            </div>
-                            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-                                <h3 class="font-bold text-slate-900 flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center text-[12px]">2</span> Display Ads (AdSense)</h3>
-                                <p class="mt-2 text-[14px] leading-6 text-slate-600">Clearly labeled as "Ad". Ads never influence rankings. Editorial and ads are separate teams with a firewall.</p>
-                            </div>
-                        </div>
-                        <div class="mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-[13px] text-emerald-800"><b>Our promise:</b> No pay-to-rank, ever. Editor's Pick is earned, not bought.</div>
-                    </section>
-
-                    <section id="editorial" class="scroll-mt-24">
-                        <h2 class="text-[28px] font-extrabold tracking-tight">Editorial Policy</h2>
-                        <p class="mt-4 text-[15px] leading-7 text-slate-600">How we test and rank:</p>
-                        <div class="mt-6 rounded-2xl border border-slate-200 overflow-hidden">
-                            <div class="grid grid-cols-4 text-[11px] font-bold tracking-widest text-slate-500 bg-slate-50 p-3 border-b"><span class="col-span-2">FACTOR</span><span>WEIGHT</span><span>WHAT WE CHECK</span></div>
-                            <div class="divide-y divide-slate-100 text-[13px]">
-                                <div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">Reporting breadth</span><span>40%</span><span class="text-slate-500">3 bureaus?</span></div>
-                                <div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">Fees</span><span>25%</span><span class="text-slate-500">Hidden fees</span></div>
-                                <div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">Approval odds</span><span>20%</span><span class="text-slate-500">No credit OK?</span></div>
-                                <div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">CFPB complaints</span><span>15%</span><span class="text-slate-500">Last 12 months</span></div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="disclosure" class="scroll-mt-24">
-                        <h2 class="text-[28px] font-extrabold tracking-tight">Ad Disclosure</h2>
-                        <p class="mt-4 text-[15px] leading-7 text-slate-600">Per FTC guidelines:</p>
-                        <div class="mt-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-[13px]">ScoreUp may receive compensation from partners. This does not affect our opinions. Ads are labeled as <span class="px-2 py-0.5 rounded bg-white border font-bold">Ad</span> and are separate from editorial.</div>
-                    </section>
+                    <section id="how-we-make-money" class="scroll-mt-24"><div class="inline-flex px-3 py-1 rounded-full bg-amber-400 text-slate-900 text-[11px] font-bold tracking-widest">TRANSPARENCY • FTC COMPLIANT</div><h2 class="mt-3 text-[28px] font-extrabold tracking-tight">How We Make Money</h2><p class="mt-4 text-[15px] leading-7 text-slate-600">Free for readers. Two ways, fully disclosed:</p><div class="mt-6 grid gap-4"><div class="p-5 rounded-2xl bg-slate-50 border"><h3 class="font-bold flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[12px]">1</span> Affiliate Commissions</h3><p class="mt-2 text-[14px] leading-6 text-slate-600">When you apply via our links to Self, Chime, Kikoff, we may earn commission at no extra cost. Links have rel="sponsored".</p></div><div class="p-5 rounded-2xl bg-slate-50 border"><h3 class="font-bold flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center text-[12px]">2</span> Display Ads (AdSense)</h3><p class="mt-2 text-[14px] leading-6 text-slate-600">Clearly labeled as Ad. Never influences rankings. Editorial and ads separate.</p></div></div></section>
+                    <section id="editorial" class="scroll-mt-24"><h2 class="text-[28px] font-extrabold tracking-tight">Editorial Policy</h2><div class="mt-6 rounded-2xl border overflow-hidden"><div class="grid grid-cols-4 text-[11px] font-bold tracking-widest text-slate-500 bg-slate-50 p-3 border-b"><span class="col-span-2">FACTOR</span><span>WEIGHT</span><span>CHECK</span></div><div class="divide-y divide-slate-100 text-[13px]"><div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">Reporting breadth</span><span>40%</span><span class="text-slate-500">3 bureaus?</span></div><div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">Fees</span><span>25%</span><span class="text-slate-500">CFPB complaints</span></div><div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">Approval odds</span><span>20%</span><span class="text-slate-500">No credit OK?</span></div><div class="grid grid-cols-4 p-3"><span class="col-span-2 font-semibold">Complaints</span><span>15%</span><span class="text-slate-500">Last 12 months</span></div></div></div></section>
+                    <section id="disclosure" class="scroll-mt-24"><h2 class="text-[28px] font-extrabold tracking-tight">Ad Disclosure</h2><div class="mt-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-[13px]">ScoreUp may receive compensation from partners. This does not affect opinions. Ads labeled as Ad. Educational only.</div><div class="mt-6 flex gap-3"><a href="/" class="h-11 px-6 rounded-full bg-slate-900 text-white font-semibold text-[13px] flex items-center">← Back to Home</a><a href="/Pages/Contact" class="h-11 px-6 rounded-full bg-white border font-semibold text-[13px] flex items-center">Contact →</a></div></section>
                 </div>
-
-                <div class="space-y-5">
-                    <div class="rounded-[20px] bg-slate-900 text-white p-6 sticky top-24">
-                        <div class="text-[11px] tracking-widest opacity-60 font-bold">QUICK LINKS</div>
-                        <ul class="mt-4 space-y-3 text-[13px]">
-                            <li><a href="#how-we-make-money" class="hover:text-emerald-400">→ How we make money</a></li>
-                            <li><a href="#editorial" class="hover:text-emerald-400">→ Editorial policy</a></li>
-                            <li><a href="#disclosure" class="hover:text-emerald-400">→ Ad Disclosure</a></li>
-                            <li><a href="/Pages/Contact" class="hover:text-emerald-400">→ Contact us</a></li>
-                        </ul>
-                        <div class="mt-6 p-3 rounded-xl bg-white/10 border border-white/10 text-[12px]">
-                            <b>Need help?</b><br>For debt crisis, call NFCC 1-800-388-2227 (free)
-                        </div>
-                    </div>
-                </div>
+                <div class="space-y-5"><div class="rounded-[20px] bg-slate-900 text-white p-6 sticky top-24"><div class="text-[11px] tracking-widest opacity-60 font-bold">QUICK LINKS</div><ul class="mt-4 space-y-3 text-[13px]"><li><a href="#how-we-make-money" class="hover:text-emerald-400">→ How we make money</a></li><li><a href="#editorial" class="hover:text-emerald-400">→ Editorial policy</a></li><li><a href="#disclosure" class="hover:text-emerald-400">→ Ad Disclosure</a></li></ul><div class="mt-6 p-3 rounded-xl bg-white/10 border border-white/10 text-[12px]"><b>Need help?</b><br>Call NFCC 1-800-388-2227 (free)</div><div class="mt-4 p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-[11px]"><b class="text-emerald-300">Sources verified:</b><br><span class="text-slate-300">CFPB, Experian, Equifax, TransUnion • Updated Oct 19, 2026 • No fake authors • E-E-A-T compliant</span></div></div></div>
             </div>
         </main>
-
-        <footer class="bg-slate-900 text-slate-300 mt-20">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 py-12 grid md:grid-cols-[1.2fr_0.8fr_0.8fr] gap-10">
-                <div>
-                    <div class="flex items-center gap-2 text-white font-extrabold text-[18px]">
-                        <span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp
-                    </div>
-                    <p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p>
-                    <div class="mt-4 flex gap-2">
-                        <span class="text-[11px] px-2 py-1 rounded-full bg-white/10 border border-white/10">© 2026 ScoreUp</span>
-                        <span class="text-[11px] px-2 py-1 rounded-full bg-emerald-500 text-white font-bold">TRUSTED</span>
-                    </div>
-                </div>
-                <div class="text-[13px] space-y-3">
-                    <div class="font-bold text-white text-[11px] tracking-widest">COMPANY</div>
-                    <div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div>
-                    <div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div>
-                    <div><a href="/Pages/About#editorial" class="hover:text-white hover:underline">Editorial policy</a></div>
-                    <div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div>
-                </div>
-                <div class="text-[13px] space-y-3">
-                    <div class="font-bold text-white text-[11px] tracking-widest">LEGAL</div>
-                    <div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div>
-                    <div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div>
-                    <div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div>
-                </div>
+        <footer class="bg-slate-900 text-slate-300 py-12">
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
+                <div><div class="flex items-center gap-2 text-white font-extrabold text-[18px]"><span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp</div><p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p></div>
+                <div class="space-y-3"><div class="font-bold text-white tracking-widest">COMPANY</div><div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div><div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div><div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div></div>
+                <div class="space-y-3"><div class="font-bold text-white tracking-widest">LEGAL</div><div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div><div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div><div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div></div>
             </div>
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-2 pb-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400">
-                <p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only • <a href="/Pages/About" class="underline hover:text-white">About</a> • <a href="/Pages/Privacy" class="underline hover:text-white">Privacy</a> • <a href="/Pages/Contact" class="underline hover:text-white">Contact</a></p>
-                <p>Data: Experian, Equifax, CFPB • Ads labeled</p>
-            </div>
+            <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400"><p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only</p><p>Data: Experian, Equifax, CFPB • Ads labeled</p></div>
         </footer>
-
+        <script>function openMenu(){const m=document.getElementById('mobileMenu'); if(m){m.classList.remove('hidden'); document.body.classList.add('no-scroll');}} function closeMenu(){const m=document.getElementById('mobileMenu'); if(m){m.classList.add('hidden'); document.body.classList.remove('no-scroll');}} document.addEventListener('DOMContentLoaded', function(){const c=document.getElementById('closeMenuBtn'); const o=document.getElementById('menuOverlay'); if(c) c.addEventListener('click', closeMenu); if(o) o.addEventListener('click', closeMenu); document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });});</script>
     </body>
 </html>
