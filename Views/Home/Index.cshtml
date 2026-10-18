@@ -13,20 +13,27 @@
     <style>
         body {
         font-family: Inter,sans-serif
-        }</style>
-    </head>
-    <body class="bg-white text-slate-900 antialiased">
+        }
 
-        <!-- ===== TOP BAR ===== -->
-        <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4">
-            <span>● Educational content — Not financial advice</span>
-            <span class="opacity-30">|</span>
-            <span>Updated Oct 19, 2026 · Reviewed by CFPB-certified counselors</span>
-        </div>
+        .no-scroll {
+        overflow: hidden
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
 
-        <!-- ===== HEADER - REAL LINKS ===== -->
-        <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
+    <!-- TOP BAR -->
+    <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4">
+        <span>● Educational content — Not financial advice</span>
+        <span class="opacity-30">|</span>
+        <span>Updated Oct 19, 2026 · Reviewed by CFPB-certified counselors</span>
+    </div>
+
+    <!-- HEADER FIXED - CLICKABLE BUTTON -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button type="button" id="menuBtn" onclick="openMenu()" class="lg:hidden w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center cursor-pointer relative z-50">☰</button>
                 <div class="flex items-center gap-8">
                     <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]">
                         <span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>
@@ -41,206 +48,228 @@
                         <a href="#reviews" class="px-3 py-2 rounded-full hover:bg-slate-50">Reviews</a>
                     </nav>
                 </div>
-                <div class="flex items-center gap-3">
-                    <span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span>
-                    <a href="#calculators" class="h-9 px-5 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center">Check Score Free</a>
-                </div>
             </div>
-        </header>
-
-        <!-- ===== HERO SECTION ===== -->
-        <section class="max-w-[1240px] mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
-
-            <!-- LEFT -->
-            <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-[13px] text-emerald-800 mb-5">
-                    <span class="bg-emerald-500 text-white px-2 py-0.5 rounded-full text-[11px] font-bold">NEW</span>
-                    Free tools updated for Oct 2026
-                </div>
-
-                <h1 class="text-[34px] md:text-[56px] font-extrabold tracking-tight leading-[0.95]">
-                    Build Credit<br>
-                    From 0 to <span class="text-emerald-500">700.</span><br>
-                    Even With<br>
-                    No History.
-                </h1>
-
-                <p class="mt-5 text-[16px] md:text-[17px] leading-7 text-slate-500 max-w-[480px]">
-                    Simple guides, honest reviews, and free calculators used by <b class="text-slate-900">250k+ beginners</b>. No hype, no affiliate-first rankings.
-                </p>
-
-                <div class="mt-8 max-w-[520px] relative">
-                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
-                    <input id="searchInput" placeholder="Search: e.g. best secured cards" class="w-full h-[54px] pl-11 pr-32 rounded-2xl border border-slate-200 shadow-[0_8px_24px_rgba(15,23,42,0.06)] text-[15px]">
-                    <button class="absolute right-1.5 top-1.5 h-[42px] px-6 rounded-xl bg-slate-900 text-white text-[14px] font-semibold">Search</button>
-                </div>
-
-                <div class="mt-8 flex flex-wrap gap-3">
-                    <a href="#calculators" class="h-12 px-7 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold flex items-center gap-2">Start with free calculator →</a>
-                    <a href="#best" class="h-12 px-6 rounded-full bg-white border border-slate-200 font-semibold flex items-center">See best picks →</a>
-                </div>
-
-                <div class="mt-6 flex items-center gap-3 text-[12px] text-slate-500">
-                    <div class="flex -space-x-2">
-                        <div class="w-7 h-7 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-[10px] font-bold">A</div>
-                        <div class="w-7 h-7 rounded-full bg-slate-300 border-2 border-white flex items-center justify-center text-[10px] font-bold">B</div>
-                        <div class="w-7 h-7 rounded-full bg-slate-400 border-2 border-white flex items-center justify-center text-[10px] font-bold">C</div>
-                    </div>
-                    <span><b class="text-slate-900">4.8/5</b> from 3,241 beginner reviews</span>
-                </div>
+            <div class="flex items-center gap-3">
+                <span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span>
+                <a href="#calculators" class="h-9 px-5 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center">Check Score Free</a>
             </div>
+        </div>
+    </header>
 
-            <!-- RIGHT - SCORE SIMULATOR -->
-            <div class="rounded-[28px] bg-white border border-slate-100 shadow-[0_24px_64px_rgba(15,23,42,0.10)] p-6 md:p-8">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-[13px] font-bold tracking-wide text-slate-500">YOUR SCORE SIMULATOR</span>
-                    <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[12px] font-bold border border-emerald-100">+190 pts potential</span>
+    <!-- MOBILE LEFT DRAWER -->
+    <div id="mobileMenu" class="fixed inset-0 z-[100] hidden">
+        <div id="menuOverlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+        <div class="relative w-[300px] max-w-[85vw] h-full bg-white shadow-2xl flex flex-col">
+            <div class="h-[68px] px-5 flex items-center justify-between border-b">
+                <div class="flex items-center gap-2 font-extrabold text-[18px]">
+                    <span class="w-7 h-7 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span> ScoreUp
                 </div>
-
-                <div class="text-center py-4">
-                    <div id="scoreDisplay" class="text-[42px] font-extrabold tracking-tighter leading-none">610</div>
-                    <div id="scoreLabel" class="mt-1 text-[13px] font-bold tracking-widest text-emerald-600">FAIR</div>
-                    <div class="mt-4 h-2 bg-slate-100 rounded-full overflow-hidden max-w-[320px] mx-auto">
-                        <div id="scoreBar" class="h-full bg-emerald-500 transition-all duration-300" style="width:45%"></div>
-                    </div>
-                </div>
-
-                <div class="mt-6 grid grid-cols-3 gap-3">
-                    <div class="rounded-2xl bg-slate-50 border border-slate-100 p-3 text-center">
-                        <div class="text-[12px] text-slate-500">Before</div>
-                        <div class="text-[18px] font-bold mt-1">520</div>
-                    </div>
-                    <div class="rounded-2xl bg-slate-50 border border-slate-100 p-3 text-center">
-                        <div class="text-[12px] text-slate-500">After 6 mo</div>
-                        <div class="text-[18px] font-bold mt-1">642</div>
-                        <div class="text-[12px] text-emerald-600 font-medium mt-0.5">+122 pts</div>
-                    </div>
-                    <div class="rounded-2xl bg-slate-900 text-white p-3 text-center">
-                        <div class="text-[12px] text-slate-400">After 12 mo</div>
-                        <div class="text-[18px] font-bold mt-1">710</div>
-                        <div class="text-[12px] text-emerald-300 font-medium mt-0.5">+190 pts</div>
-                    </div>
-                </div>
-
-                <div class="mt-6">
-                    <div class="flex justify-between text-[12px] text-slate-500 mb-2">
-                        <span>Months of on-time payments</span>
-                        <span id="percentText" class="font-medium">45% progress</span>
-                    </div>
-                    <input type="range" id="scoreSlider" min="0" max="100" value="45" class="w-full accent-emerald-500 h-2" oninput="updateScore(this.value)">
-                </div>
+                <button type="button" id="closeMenuBtn" onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button>
             </div>
-        </section>
+            <nav class="p-4 flex flex-col gap-1">
+                <a href="/" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Home</span><span>→</span></a>
+                <a href="/Pages/Learn" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Learn</span><span>→</span></a>
+                <a href="/Pages/CreditCards" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Credit Cards</span><span>→</span></a>
+                <a href="/Pages/Loans" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Loans</span><span>→</span></a>
+                <a href="/#calculators" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Calculators</span><span>→</span></a>
+                <a href="/#reviews" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Reviews</span><span>→</span></a>
+            </nav>
+            <div class="mt-auto p-4 border-t">
+                <div class="rounded-2xl bg-emerald-50 border border-emerald-100 p-4">
+                    <div class="text-[13px] font-bold">Free Score Simulator</div>
+                    <div class="text-[12px] text-slate-500 mt-1">No email needed. FICO 10T model.</div>
+                    <a href="/#calculators" onclick="closeMenu()" class="mt-3 block h-10 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center justify-center">Check Score Free</a>
+                </div>
+                <div class="mt-4 text-[11px] text-slate-400">© 2026 ScoreUp • Educational only</div>
+            </div>
+        </div>
+    </div>
 
-        <!-- ===== DATA SOURCED BAR ===== -->
-        <div class="border-y border-slate-100 bg-slate-50/70">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 py-5 flex flex-col lg:flex-row gap-4 justify-between items-center">
-                <div class="flex items-center gap-2 text-[13px] font-semibold">
-                    <span class="tracking-wide">DATA SOURCED FROM:</span>
-                    <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Experian</span>
-                    <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Equifax</span>
-                    <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">CFPB</span>
+    <!-- HERO -->
+    <section class="max-w-[1240px] mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+        <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-[13px] text-emerald-800 mb-5">
+                <span class="bg-emerald-500 text-white px-2 py-0.5 rounded-full text-[11px] font-bold">NEW</span>
+                Free tools updated for Oct 2026
+            </div>
+            <h1 class="text-[34px] md:text-[56px] font-extrabold tracking-tight leading-[0.95]">
+                Build Credit<br>
+                From 0 to <span class="text-emerald-500">700.</span><br>
+                Even With<br>
+                No History.
+            </h1>
+            <p class="mt-5 text-[16px] md:text-[17px] leading-7 text-slate-500 max-w-[480px]">
+                Simple guides, honest reviews, and free calculators used by <b class="text-slate-900">250k+ beginners</b>. No hype, no affiliate-first rankings.
+            </p>
+            <div class="mt-8 max-w-[520px] relative">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+                <input id="searchInput" placeholder="Search: e.g. best secured cards" class="w-full h-[54px] pl-11 pr-32 rounded-2xl border border-slate-200 shadow-[0_8px_24px_rgba(15,23,42,0.06)] text-[15px]">
+                <button class="absolute right-1.5 top-1.5 h-[42px] px-6 rounded-xl bg-slate-900 text-white text-[14px] font-semibold">Search</button>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#calculators" class="h-12 px-7 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold flex items-center gap-2">Start with free calculator →</a>
+                <a href="#best" class="h-12 px-6 rounded-full bg-white border border-slate-200 font-semibold flex items-center">See best picks →</a>
+            </div>
+            <div class="mt-6 flex items-center gap-3 text-[12px] text-slate-500">
+                <div class="flex -space-x-2">
+                    <div class="w-7 h-7 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-[10px] font-bold">A</div>
+                    <div class="w-7 h-7 rounded-full bg-slate-300 border-2 border-white flex items-center justify-center text-[10px] font-bold">B</div>
+                    <div class="w-7 h-7 rounded-full bg-slate-400 border-2 border-white flex items-center justify-center text-[10px] font-bold">C</div>
                 </div>
-                <div class="text-[12px] px-4 py-2 rounded-full bg-white border shadow-sm">
-                    <b>Written by Amanda S. · Former CFPB analyst</b> — Reviewed by Dr. James L., CFA
-                </div>
+                <span><b class="text-slate-900">4.8/5</b> from 3,241 beginner reviews</span>
             </div>
         </div>
 
-        <!-- ===== CALCULATORS ===== -->
-        <section id="calculators" class="max-w-[1240px] mx-auto px-5 md:px-8 py-16">
-            <h2 class="text-[28px] md:text-[36px] font-extrabold tracking-tight leading-[0.95]">Free calculators<br>built for beginners</h2>
-            <p class="mt-3 text-[15px] text-slate-500">No email required. Estimates use FICO 10T model.</p>
-
-            <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-[20px] border bg-white p-6 shadow-sm">
-                    <h3 class="font-bold text-[18px]">Credit Score Estimator</h3>
-                    <p class="text-[13px] text-slate-500 mt-1">Slide to see future score</p>
-                    <div class="mt-6 p-4 rounded-xl bg-slate-50 border">
-                        <div class="text-[13px]">Today: <b>520</b> → In 12 months: <b id="calcScore" class="text-emerald-600">610</b></div>
-                    </div>
-                </div>
-                <div class="rounded-[20px] border bg-white p-6 shadow-sm">
-                    <h3 class="font-bold text-[18px]">Rent Reporting</h3>
-                    <p class="text-[13px] text-slate-500 mt-1">Rent: $<span id="rentVal">1250</span></p>
-                    <input type="range" min="500" max="3000" value="1250" class="w-full mt-4 accent-slate-900" oninput="document.getElementById('rentVal').innerText=this.value">
-                    <div class="mt-4 p-4 rounded-xl bg-slate-900 text-white">
-                        <div class="text-[11px] opacity-60">EST. LIFT</div>
-                        <div class="text-[22px] font-bold">+12 points</div>
-                    </div>
-                </div>
-                <div class="rounded-[20px] border border-dashed bg-slate-50 p-6 text-center flex flex-col justify-center">
-                    <div class="text-[12px] font-bold">AdSense — In-Content Ad</div>
-                    <div class="text-[11px] text-slate-500 mt-2">336×280 · High viewability</div>
+        <div class="rounded-[28px] bg-white border border-slate-100 shadow-[0_24px_64px_rgba(15,23,42,0.10)] p-6 md:p-8">
+            <div class="flex items-center justify-between mb-6">
+                <span class="text-[13px] font-bold tracking-wide text-slate-500">YOUR SCORE SIMULATOR</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[12px] font-bold border border-emerald-100">+190 pts potential</span>
+            </div>
+            <div class="text-center py-4">
+                <div id="scoreDisplay" class="text-[42px] font-extrabold tracking-tighter leading-none">610</div>
+                <div id="scoreLabel" class="mt-1 text-[13px] font-bold tracking-widest text-emerald-600">FAIR</div>
+                <div class="mt-4 h-2 bg-slate-100 rounded-full overflow-hidden max-w-[320px] mx-auto">
+                    <div id="scoreBar" class="h-full bg-emerald-500 transition-all duration-300" style="width:45%"></div>
                 </div>
             </div>
-        </section>
-
-        <!-- ===== BEST PRODUCTS ===== -->
-        <section id="best" class="bg-slate-50 border-y py-16">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8">
-                <h2 class="text-[28px] md:text-[36px] font-extrabold tracking-tight">Best Credit Builder Products<br>in October 2026</h2>
-                <div class="mt-8 rounded-[20px] bg-white border overflow-hidden">
-                    <table class="w-full text-[13px]">
-                        <thead class="bg-slate-50 text-[11px] text-slate-500 tracking-widest"><tr><th class="text-left p-4">PRODUCT</th><th class="text-left">BEST FOR</th><th>FEE</th><th class="text-right p-4">ACTION</th></tr></thead>
-                        <tbody>
-                            <tr class="border-t bg-emerald-50/40"><td class="p-4 font-bold">Self - Credit Builder <span class="ml-2 bg-slate-900 text-white text-[10px] px-2 py-0.5 rounded-full">Editor's Pick</span></td><td>Building savings</td><td>$0</td><td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-emerald-500 text-white text-[12px] font-bold">Apply</a></td></tr>
-                            <tr class="border-t"><td class="p-4 font-bold">Chime Credit Builder</td><td>No fees</td><td>$0</td><td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[12px]">Apply</a></td></tr>
-                            <tr class="border-t"><td class="p-4 font-bold">Kikoff</td><td>Starter line</td><td>$0-$60</td><td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[12px]">Apply</a></td></tr>
-                        </tbody>
-                    </table>
+            <div class="mt-6 grid grid-cols-3 gap-3">
+                <div class="rounded-2xl bg-slate-50 border border-slate-100 p-3 text-center">
+                    <div class="text-[12px] text-slate-500">Before</div>
+                    <div class="text-[18px] font-bold mt-1">520</div>
+                </div>
+                <div class="rounded-2xl bg-slate-50 border border-slate-100 p-3 text-center">
+                    <div class="text-[12px] text-slate-500">After 6 mo</div>
+                    <div class="text-[18px] font-bold mt-1">642</div>
+                    <div class="text-[12px] text-emerald-600 font-medium mt-0.5">+122 pts</div>
+                </div>
+                <div class="rounded-2xl bg-slate-900 text-white p-3 text-center">
+                    <div class="text-[12px] text-slate-400">After 12 mo</div>
+                    <div class="text-[18px] font-bold mt-1">710</div>
+                    <div class="text-[12px] text-emerald-300 font-medium mt-0.5">+190 pts</div>
                 </div>
             </div>
-        </section>
+            <div class="mt-6">
+                <div class="flex justify-between text-[12px] text-slate-500 mb-2">
+                    <span>Months of on-time payments</span>
+                    <span id="percentText" class="font-medium">45% progress</span>
+                </div>
+                <input type="range" id="scoreSlider" min="0" max="100" value="45" class="w-full accent-emerald-500 h-2" oninput="updateScore(this.value)">
+            </div>
+        </div>
+    </section>
 
-        <!-- ===== FOOTER WITH REAL LINKS FOR GOOGLE ===== -->
-        <footer class="bg-slate-900 text-slate-300 py-12">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
-                <div>
-                    <div class="flex items-center gap-2 text-white font-extrabold text-[18px]">
-                        <span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp
-                    </div>
-                    <p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p>
-                </div>
-                <div class="text- space-y-3">
-                    <div class="font-bold text-white text- tracking-widest">COMPANY</div>
-                    <div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div>
-                    <div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div>
-                    <div><a href="/Pages/About#editorial" class="hover:text-white hover:underline">Editorial policy</a></div>
-                    <div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div>
-                </div>
-                <div class="text- space-y-3">
-                    <div class="font-bold text-white text- tracking-widest">LEGAL</div>
-                    <div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div>
-                    <div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div>
-                    <div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div>
+    <div class="border-y border-slate-100 bg-slate-50/70">
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8 py-5 flex flex-col lg:flex-row gap-4 justify-between items-center">
+            <div class="flex items-center gap-2 text-[13px] font-semibold">
+                <span class="tracking-wide">DATA SOURCED FROM:</span>
+                <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Experian</span>
+                <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Equifax</span>
+                <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">CFPB</span>
+            </div>
+            <div class="text-[12px] px-4 py-2 rounded-full bg-white border shadow-sm">
+                <b>Written by Amanda S. · Former CFPB analyst</b> — Reviewed by Dr. James L., CFA
+            </div>
+        </div>
+    </div>
+
+    <section id="calculators" class="max-w-[1240px] mx-auto px-5 md:px-8 py-16">
+        <h2 class="text-[28px] md:text-[36px] font-extrabold tracking-tight leading-[0.95]">Free calculators<br>built for beginners</h2>
+        <p class="mt-3 text-[15px] text-slate-500">No email required. Estimates use FICO 10T model.</p>
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="rounded-[20px] border bg-white p-6 shadow-sm">
+                <h3 class="font-bold text-[18px]">Credit Score Estimator</h3>
+                <p class="text-[13px] text-slate-500 mt-1">Slide to see future score</p>
+                <div class="mt-6 p-4 rounded-xl bg-slate-50 border">
+                    <div class="text-[13px]">Today: <b>520</b> → In 12 months: <b id="calcScore" class="text-emerald-600">610</b></div>
                 </div>
             </div>
-
-            <!-- SEO BAR - MUST HAVE -->
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400">
-                <p>
-                    <b class="text-slate-300">© 2026 ScoreUp</b> • Educational only •
-                    <a href="/Pages/About" class="underline hover:text-white">About</a> •
-                    <a href="/Pages/Privacy" class="underline hover:text-white">Privacy Policy</a> •
-                    <a href="/Pages/Contact" class="underline hover:text-white">Contact</a>
-                </p>
-                <p>Data: Experian, Equifax, CFPB • Ads labeled</p>
+            <div class="rounded-[20px] border bg-white p-6 shadow-sm">
+                <h3 class="font-bold text-[18px]">Rent Reporting</h3>
+                <p class="text-[13px] text-slate-500 mt-1">Rent: $<span id="rentVal">1250</span></p>
+                <input type="range" min="500" max="3000" value="1250" class="w-full mt-4 accent-slate-900" oninput="document.getElementById('rentVal').innerText=this.value">
+                <div class="mt-4 p-4 rounded-xl bg-slate-900 text-white">
+                    <div class="text-[11px] opacity-60">EST. LIFT</div>
+                    <div class="text-[22px] font-bold">+12 points</div>
+                </div>
             </div>
-        </footer>
+            <div class="rounded-[20px] border border-dashed bg-slate-50 p-6 text-center flex flex-col justify-center">
+                <div class="text-[12px] font-bold">AdSense — In-Content Ad</div>
+                <div class="text-[11px] text-slate-500 mt-2">336×280 · High viewability</div>
+            </div>
+        </div>
+    </section>
 
-        <script>
-            // Simple human readable JS
-            function updateScore(val){
-            const score = Math.min(850, 520 + Math.round(val/100*190));
-            document.getElementById('scoreDisplay').innerText = score;
-            document.getElementById('percentText').innerText = val + '% progress';
-            document.getElementById('scoreBar').style.width = val + '%';
-            document.getElementById('calcScore').innerText = score;
-            let label = score<580?'POOR':score<670?'FAIR':score<740?'GOOD':'EXCELLENT';
-            document.getElementById('scoreLabel').innerText = label;
-            }
-        </script>
+    <section id="best" class="bg-slate-50 border-y py-16">
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8">
+            <h2 class="text-[28px] md:text-[36px] font-extrabold tracking-tight">Best Credit Builder Products<br>in October 2026</h2>
+            <div class="mt-8 rounded-[20px] bg-white border overflow-hidden">
+                <table class="w-full text-[13px]">
+                    <thead class="bg-slate-50 text-[11px] text-slate-500 tracking-widest"><tr><th class="text-left p-4">PRODUCT</th><th class="text-left">BEST FOR</th><th>FEE</th><th class="text-right p-4">ACTION</th></tr></thead>
+                    <tbody>
+                        <tr class="border-t bg-emerald-50/40"><td class="p-4 font-bold">Self - Credit Builder <span class="ml-2 bg-slate-900 text-white text-[10px] px-2 py-0.5 rounded-full">Editor's Pick</span></td><td>Building savings</td><td>$0</td><td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-emerald-500 text-white text-[12px] font-bold">Apply</a></td></tr>
+                        <tr class="border-t"><td class="p-4 font-bold">Chime Credit Builder</td><td>No fees</td><td>$0</td><td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[12px]">Apply</a></td></tr>
+                        <tr class="border-t"><td class="p-4 font-bold">Kikoff</td><td>Starter line</td><td>$0-$60</td><td class="text-right p-4"><a href="#" class="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[12px]">Apply</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-    </body>
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
+            <div>
+                <div class="flex items-center gap-2 text-white font-extrabold text-[18px]">
+                    <span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp
+                </div>
+                <p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p>
+            </div>
+            <div class="space-y-3">
+                <div class="font-bold text-white tracking-widest">COMPANY</div>
+                <div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div>
+                <div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div>
+                <div><a href="/Pages/About#editorial" class="hover:text-white hover:underline">Editorial policy</a></div>
+                <div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div>
+            </div>
+            <div class="space-y-3">
+                <div class="font-bold text-white tracking-widest">LEGAL</div>
+                <div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div>
+                <div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div>
+                <div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div>
+            </div>
+        </div>
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400">
+            <p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only • <a href="/Pages/About" class="underline hover:text-white">About</a> • <a href="/Pages/Privacy" class="underline hover:text-white">Privacy Policy</a> • <a href="/Pages/Contact" class="underline hover:text-white">Contact</a></p>
+            <p>Data: Experian, Equifax, CFPB • Ads labeled</p>
+        </div>
+    </footer>
+
+    <script>
+        function updateScore(val){
+        const score = Math.min(850, 520 + Math.round(val/100*190));
+        document.getElementById('scoreDisplay').innerText = score;
+        document.getElementById('percentText').innerText = val + '% progress';
+        document.getElementById('scoreBar').style.width = val + '%';
+        const c = document.getElementById('calcScore');
+        if(c) c.innerText = score;
+        let label = score<580?'POOR':score<670?'FAIR':score<740?'GOOD':'EXCELLENT';
+        document.getElementById('scoreLabel').innerText = label;
+        }
+        function openMenu(){
+        const m = document.getElementById('mobileMenu');
+        if(m){ m.classList.remove('hidden'); document.body.classList.add('no-scroll'); }
+        }
+        function closeMenu(){
+        const m = document.getElementById('mobileMenu');
+        if(m){ m.classList.add('hidden'); document.body.classList.remove('no-scroll'); }
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+        const closeBtn = document.getElementById('closeMenuBtn');
+        const overlay = document.getElementById('menuOverlay');
+        if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+        if(overlay) overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+        });
+    </script>
+
+</body>
 </html>
