@@ -8,7 +8,7 @@ Disallow: /*.json$
 Disallow: /*?*
 
 # Sitemap - Absolute URL required for Google
-Sitemap: https://scoreup-credit-builder.onrender.com/sitemap.xml
+Sitemap: https://getscoreup.co.za/sitemap.xml
 
 # For AdSense / Googlebot
 User-agent: Mediapartners-Google
