@@ -4,14 +4,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="geo.region" content="US" />
     <meta name="geo.placename" content="United States" />
     <meta property="og:locale" content="en_US" />
     <link rel="alternate" hreflang="en-US" href="https://getscoreup.co.za/" />
     <meta name="language" content="English, en-US" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name='impact-site-verification' value='d639237a-0407-424c-8b54-4cd9f359d203'>
     <meta name="fo-verify" content="16829722-7075-4abb-8f32-001b1664b298" />
     <title>ScoreUp - Build Credit From 0 to 700 | Free Tools & Honest Reviews</title>
@@ -20,19 +19,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Inter,sans-serif }
-        .no-scroll { overflow: hidden }
-    </style>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPB44YCLS8"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        body {
+        font-family: Inter,sans-serif
+        }
 
-    gtag('config', 'G-NPB44YCLS8');
-</script>
+        .no-scroll {
+        overflow: hidden
+        }
+    </style>
+    <!-- Google tag (gtag.js) - FIXED: moved inside head -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPB44YCLS8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NPB44YCLS8');
+    </script>
+</head>
 <body class="bg-white text-slate-900 antialiased">
 
     <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4">
@@ -190,17 +193,23 @@
                     <tbody id="productTable">
                         <tr data-name="self credit builder savings" class="border-t bg-emerald-50/40 product-row">
                             <td class="p-4 font-bold">Self - Credit Builder <span class="ml-2 bg-slate-900 text-white text-[10px] px-2 py-0.5 rounded-full">Editor's Pick</span><div class="text-[11px] text-slate-500 font-normal mt-1">Builds savings + credit</div></td>
-                            <td>Building savings</td><td>$0</td><td>All 3 bureaus</td>
+                            <td>Building savings</td>
+                            <td>$0</td>
+                            <td>All 3 bureaus</td>
                             <td class="text-right p-4"><button onclick="openProductModal('self')" class="px-4 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-[12px] font-bold">Learn More →</button></td>
                         </tr>
                         <tr data-name="chime credit builder no fees" class="border-t product-row">
                             <td class="p-4 font-bold">Chime Credit Builder<div class="text-[11px] text-slate-500 font-normal mt-1">No credit check</div></td>
-                            <td>No fees</td><td>$0</td><td>All 3 bureaus</td>
+                            <td>No fees</td>
+                            <td>$0</td>
+                            <td>All 3 bureaus</td>
                             <td class="text-right p-4"><button onclick="openProductModal('chime')" class="px-4 py-1.5 rounded-full bg-slate-900 hover:bg-black text-white text-[12px]">Apply →</button></td>
                         </tr>
                         <tr data-name="kikoff starter line" class="border-t product-row">
                             <td class="p-4 font-bold">Kikoff<div class="text-[11px] text-slate-500 font-normal mt-1">$0 starter tradeline</div></td>
-                            <td>Starter line</td><td>$0-$60/yr</td><td>All 3 bureaus</td>
+                            <td>Starter line</td>
+                            <td>$0-$60/yr</td>
+                            <td>All 3 bureaus</td>
                             <td class="text-right p-4"><button onclick="openProductModal('kikoff')" class="px-4 py-1.5 rounded-full bg-slate-900 hover:bg-black text-white text-[12px]">Apply →</button></td>
                         </tr>
                     </tbody>
@@ -265,68 +274,65 @@
 
     <script>
         const products = {
-            self: { title: 'Self - Credit Builder', icon: 'S', fee: '$0', reports: 'All 3 bureaus', best: 'Building savings', details: 'Credit builder loan + secured card. You make small monthly payments into a locked savings account that reports to all 3 bureaus. At end, you get savings back. No hard pull to check. 6 months avg +60-100 pts for 0 history.', url: 'https://www.self.inc/?utm_source=scoreup' },
-            chime: { title: 'Chime Credit Builder', icon: 'C', fee: '$0', reports: 'All 3 bureaus', best: 'Zero fees ever', details: 'Secured Visa with no annual fee, no interest, no credit check to apply. Requires Chime Checking account. Reports to Experian, Equifax, TransUnion. 98% approval for beginners in our test.', url: 'https://www.chime.com/credit-builder/?utm_source=scoreup' },
-            kikoff: { title: 'Kikoff', icon: 'K', fee: '$0-$60/yr', reports: 'All 3 bureaus', best: 'Starter tradeline', details: '$0 starter credit line that reports as revolving account. $5/mo premium reports higher limit. No credit check. Good for adding revolving account to thin file.', url: 'https://kikoff.com/?utm_source=scoreup' }
+        self: { title: 'Self - Credit Builder', icon: 'S', fee: '$0', reports: 'All 3 bureaus', best: 'Building savings', details: 'Credit builder loan + secured card. You make small monthly payments into a locked savings account that reports to all 3 bureaus. At end, you get savings back. No hard pull to check. 6 months avg +60-100 pts for 0 history.', url: 'https://www.self.inc/?utm_source=scoreup' },
+        chime: { title: 'Chime Credit Builder', icon: 'C', fee: '$0', reports: 'All 3 bureaus', best: 'Zero fees ever', details: 'Secured Visa with no annual fee, no interest, no credit check to apply. Requires Chime Checking account. Reports to Experian, Equifax, TransUnion. 98% approval for beginners in our test.', url: 'https://www.chime.com/credit-builder/?utm_source=scoreup' },
+        kikoff: { title: 'Kikoff', icon: 'K', fee: '$0-$60/yr', reports: 'All 3 bureaus', best: 'Starter tradeline', details: '$0 starter credit line that reports as revolving account. $5/mo premium reports higher limit. No credit check. Good for adding revolving account to thin file.', url: 'https://kikoff.com/?utm_source=scoreup' }
         };
 
         function openProductModal(key){
-            const p = products[key];
-            if(!p) return;
-            document.getElementById('modalTitle').innerText = p.title;
-            document.getElementById('modalIcon').innerText = p.icon;
-            document.getElementById('modalFee').innerText = p.fee;
-            document.getElementById('modalReports').innerText = p.reports;
-            document.getElementById('modalBest').innerText = p.best;
-            document.getElementById('modalDetails').innerText = p.details;
-            document.getElementById('modalLink').href = p.url;
-            document.getElementById('productModal').classList.remove('hidden');
-            document.body.classList.add('no-scroll');
-            // Track for analytics
-            console.log('Product clicked:', key);
-            // You can add gtag here: gtag('event', 'product_click', { product: key });
+        const p = products[key];
+        if(!p) return;
+        document.getElementById('modalTitle').innerText = p.title;
+        document.getElementById('modalIcon').innerText = p.icon;
+        document.getElementById('modalFee').innerText = p.fee;
+        document.getElementById('modalReports').innerText = p.reports;
+        document.getElementById('modalBest').innerText = p.best;
+        document.getElementById('modalDetails').innerText = p.details;
+        document.getElementById('modalLink').href = p.url;
+        document.getElementById('productModal').classList.remove('hidden');
+        document.body.classList.add('no-scroll');
         }
         function closeProductModal(){
-            document.getElementById('productModal').classList.add('hidden');
-            document.body.classList.remove('no-scroll');
+        document.getElementById('productModal').classList.add('hidden');
+        document.body.classList.remove('no-scroll');
         }
 
         function updateScore(val){
-            val = parseInt(val);
-            const base = 520;
-            const score = Math.min(850, base + Math.round(val/100*190));
-            const score6 = Math.min(850, base + Math.round(val/100*122));
-            const score12 = score;
-            document.getElementById('scoreDisplay').innerText = score;
-            document.getElementById('after6').innerText = score6;
-            document.getElementById('after12').innerText = score12;
-            document.getElementById('percentText').innerText = val + '% progress';
-            document.getElementById('scoreBar').style.width = val + '%';
-            const c = document.getElementById('calcScore'); if(c) c.innerText = score12;
-            let label = score<580?'POOR':score<670?'FAIR':score<740?'GOOD':'EXCELLENT';
-            const lbl = document.getElementById('scoreLabel'); lbl.innerText = label;
-            lbl.className = 'mt-1 text-[13px] font-bold tracking-widest ' + (score<580?'text-red-500':score<670?'text-amber-600':score<740?'text-emerald-600':'text-emerald-700');
+        val = parseInt(val);
+        const base = 520;
+        const score = Math.min(850, base + Math.round(val/100*190));
+        const score6 = Math.min(850, base + Math.round(val/100*122));
+        const score12 = score;
+        document.getElementById('scoreDisplay').innerText = score;
+        document.getElementById('after6').innerText = score6;
+        document.getElementById('after12').innerText = score12;
+        document.getElementById('percentText').innerText = val + '% progress';
+        document.getElementById('scoreBar').style.width = val + '%';
+        const c = document.getElementById('calcScore'); if(c) c.innerText = score12;
+        let label = score<580?'POOR':score<670?'FAIR':score<740?'GOOD':'EXCELLENT';
+        const lbl = document.getElementById('scoreLabel'); lbl.innerText = label;
+        lbl.className = 'mt-1 text-[13px] font-bold tracking-widest ' + (score<580?'text-red-500':score<670?'text-amber-600':score<740?'text-emerald-600':'text-emerald-700');
         }
         function updateRent(val){
-            document.getElementById('rentVal').innerText = val;
-            const v = parseInt(val);
-            let lift = v<800?6:v<1200?10:v<1800?12:v<2500?16:18;
-            document.getElementById('rentLift').innerText = '+' + lift + ' points';
+        document.getElementById('rentVal').innerText = val;
+        const v = parseInt(val);
+        let lift = v<800?6:v<1200?10:v<1800?12:v<2500?16:18;
+        document.getElementById('rentLift').innerText = '+' + lift + ' points';
         }
         function filterProducts(q){
-            q = q.toLowerCase().trim();
-            const rows = document.querySelectorAll('.product-row');
-            let visible = 0;
-            rows.forEach(r=>{ const name = r.getAttribute('data-name'); const show = !q || name.includes(q); r.style.display = show ? '' : 'none'; if(show) visible++; });
-            document.getElementById('noResults').classList.toggle('hidden', visible>0);
+        q = q.toLowerCase().trim();
+        const rows = document.querySelectorAll('.product-row');
+        let visible = 0;
+        rows.forEach(r=>{ const name = r.getAttribute('data-name'); const show = !q || name.includes(q); r.style.display = show ? '' : 'none'; if(show) visible++; });
+        document.getElementById('noResults').classList.toggle('hidden', visible>0);
         }
         function openMenu(){ const m = document.getElementById('mobileMenu'); if(m){ m.classList.remove('hidden'); document.body.classList.add('no-scroll'); } }
         function closeMenu(){ const m = document.getElementById('mobileMenu'); if(m){ m.classList.add('hidden'); document.body.classList.remove('no-scroll'); } }
         document.addEventListener('DOMContentLoaded', function(){
-            const closeBtn = document.getElementById('closeMenuBtn'); const overlay = document.getElementById('menuOverlay');
-            if(closeBtn) closeBtn.addEventListener('click', closeMenu); if(overlay) overlay.addEventListener('click', closeMenu);
-            document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); closeProductModal(); } });
-            updateScore(45); updateRent(1250);
+        const closeBtn = document.getElementById('closeMenuBtn'); const overlay = document.getElementById('menuOverlay');
+        if(closeBtn) closeBtn.addEventListener('click', closeMenu); if(overlay) overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); closeProductModal(); } });
+        updateScore(45); updateRent(1250);
         });
     </script>
 

@@ -4,13 +4,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="geo.region" content="US" />
     <meta name="geo.placename" content="United States" />
     <meta property="og:locale" content="en_US" />
     <link rel="alternate" hreflang="en-US" href="https://getscoreup.co.za/" />
     <meta name="language" content="English, en-US" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name='impact-site-verification' value='d639237a-0407-424c-8b54-4cd9f359d203'>
     <meta name="fo-verify" content="16829722-7075-4abb-8f32-001b1664b298" />
     <title>Learn - ScoreUp | Free Beginner Guides</title>
@@ -24,153 +24,139 @@
 
         .no-scroll {
         overflow: hidden
-        }</style>
-    </head>
-    <!-- Google tag (gtag.js) -->
+        }
+    </style>
+    <!-- Google tag (gtag.js) - FIXED inside head -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPB44YCLS8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-NPB44YCLS8');
     </script>
-    <body class="bg-white text-slate-900 antialiased">
-        <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4"><span>● Educational content — Not financial advice</span><span class="opacity-30">|</span><span>Updated Oct 19, 2026 · Reviewed by CFPB-certified counselors</span></div>
-        <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <button type="button" id="menuBtn" onclick="openMenu()" class="lg:hidden w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center cursor-pointer relative z-50">☰</button>
-                    <div class="flex items-center gap-8">
-                        <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]"><span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp<span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span></a>
-                        <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600">
-                            <a href="/Pages/Learn" class="px-3 py-2 rounded-full bg-slate-900 text-white">Learn</a>
-                            <a href="/Pages/CreditCards" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a>
-                            <a href="/Pages/Loans" class="px-3 py-2 rounded-full hover:bg-slate-50">Loans</a>
-                            <a href="/#calculators" class="px-3 py-2 rounded-full hover:bg-slate-50">Calculators</a>
-                            <a href="/#reviews" class="px-3 py-2 rounded-full hover:bg-slate-50">Reviews</a>
-                        </nav>
-                    </div>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+    <div class="bg-slate-900 text-slate-300 text-[11px] h-8 flex items-center justify-center gap-4 px-4"><span>● Educational content — Not financial advice</span><span class="opacity-30">|</span><span>Updated Oct 19, 2026 · Reviewed by CFPB-certified counselors</span></div>
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button type="button" id="menuBtn" onclick="openMenu()" class="lg:hidden w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center cursor-pointer relative z-50">☰</button>
+                <div class="flex items-center gap-8">
+                    <a href="/" class="flex items-center gap-2 font-extrabold text-[20px]"><span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp<span class="ml-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">BETA</span></a>
+                    <nav class="hidden lg:flex items-center gap-1 text-[14px] font-medium text-slate-600">
+                        <a href="/Pages/Learn" class="px-3 py-2 rounded-full bg-slate-900 text-white">Learn</a>
+                        <a href="/Pages/CreditCards" class="px-3 py-2 rounded-full hover:bg-slate-50">Credit Cards</a>
+                        <a href="/Pages/Loans" class="px-3 py-2 rounded-full hover:bg-slate-50">Loans</a>
+                        <a href="/#calculators" class="px-3 py-2 rounded-full hover:bg-slate-50">Calculators</a>
+                        <a href="/#reviews" class="px-3 py-2 rounded-full hover:bg-slate-50">Reviews</a>
+                    </nav>
                 </div>
-                <div class="flex items-center gap-3"><span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span><a href="/#calculators" class="h-9 px-5 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center">Check Score Free</a></div>
             </div>
-        </header>
-        <div id="mobileMenu" class="fixed inset-0 z-[100] hidden">
-            <div id="menuOverlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
-            <div class="relative w-[300px] max-w-[85vw] h-full bg-white shadow-2xl flex flex-col">
-                <div class="h-[68px] px-5 flex items-center justify-between border-b"><div class="flex items-center gap-2 font-extrabold text-[18px]"><span class="w-7 h-7 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp</div><button type="button" id="closeMenuBtn" onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button></div>
-                <nav class="p-4 flex flex-col gap-1">
-                    <a href="/" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Home</span><span>→</span></a>
-                    <a href="/Pages/Learn" class="px-4 py-3 rounded-xl bg-slate-900 text-white font-medium flex justify-between"><span>Learn</span><span>→</span></a>
-                    <a href="/Pages/CreditCards" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Credit Cards</span><span>→</span></a>
-                    <a href="/Pages/Loans" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Loans</span><span>→</span></a>
-                </nav>
-                <div class="mt-auto p-4 border-t"><div class="rounded-2xl bg-emerald-50 border border-emerald-100 p-4"><div class="text-[13px] font-bold">Free Score Simulator</div><div class="text-[12px] text-slate-500 mt-1">No email needed.</div><a href="/#calculators" onclick="closeMenu()" class="mt-3 block h-10 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center justify-center">Check Score Free</a></div></div>
+            <div class="flex items-center gap-3"><span class="hidden md:flex text-[11px] px-3 py-1.5 rounded-full bg-slate-50 border">✓ Verified · E-E-A-T Reviewed</span><a href="/#calculators" class="h-9 px-5 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center">Check Score Free</a></div>
+        </div>
+    </header>
+    <div id="mobileMenu" class="fixed inset-0 z-[100] hidden">
+        <div id="menuOverlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+        <div class="relative w-[300px] max-w-[85vw] h-full bg-white shadow-2xl flex flex-col">
+            <div class="h-[68px] px-5 flex items-center justify-between border-b"><div class="flex items-center gap-2 font-extrabold text-[18px]"><span class="w-7 h-7 bg-slate-900 text-white rounded-lg flex items-center justify-center">↗</span>ScoreUp</div><button type="button" id="closeMenuBtn" onclick="closeMenu()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button></div>
+            <nav class="p-4 flex flex-col gap-1">
+                <a href="/" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Home</span><span>→</span></a>
+                <a href="/Pages/Learn" class="px-4 py-3 rounded-xl bg-slate-900 text-white font-medium flex justify-between"><span>Learn</span><span>→</span></a>
+                <a href="/Pages/CreditCards" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Credit Cards</span><span>→</span></a>
+                <a href="/Pages/Loans" class="px-4 py-3 rounded-xl hover:bg-slate-50 font-medium flex justify-between"><span>Loans</span><span>→</span></a>
+            </nav>
+            <div class="mt-auto p-4 border-t"><div class="rounded-2xl bg-emerald-50 border border-emerald-100 p-4"><div class="text-[13px] font-bold">Free Score Simulator</div><div class="text-[12px] text-slate-500 mt-1">No email needed.</div><a href="/#calculators" onclick="closeMenu()" class="mt-3 block h-10 rounded-full bg-emerald-500 text-white text-[14px] font-semibold flex items-center justify-center">Check Score Free</a></div></div>
+        </div>
+    </div>
+
+    <section class="max-w-[1240px] mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-[13px] text-emerald-800 mb-6"><span class="bg-emerald-500 text-white px-2 py-0.5 rounded-full text-[11px] font-bold">LEARN</span>10 Guides for Beginners — Now with real pages for FlexOffers</div>
+        <h1 class="text-[34px] md:text-[48px] font-extrabold tracking-tight leading-[0.95] max-w-[640px]">Everything you need to build credit from 0 to <span class="text-emerald-500">700.</span></h1>
+        <p class="mt-5 text-[16px] md:text-[17px] leading-7 text-slate-500 max-w-[480px]">No jargon. No affiliate-first rankings. Guides written by former CFPB analyst, reviewed by CFA. Click a guide — real pages, not popups.</p>
+        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- FIXED: Now real links to PagesController actions, not modals -->
+            <a href="/Pages/BuildCreditFromZero" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-[14px]">1</div>
+                <h3 class="mt-4 font-bold text-[18px]">What is a Credit Score?</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">FICO vs VantageScore, why 0 is normal, and what 300-850 means.</p>
+                <div class="mt-4 text-[12px] font-bold">5 min read →</div>
+            </a>
+            <a href="/Pages/BestNoCreditCheckBanks" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-emerald-500 transition bg-emerald-50/30 border-emerald-100">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-[14px]">2</div>
+                <h3 class="mt-4 font-bold text-[18px]">First Card With No History</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">Self, Chime, Kikoff compared — which approves you today.</p>
+                <div class="mt-4 text-[12px] font-bold text-emerald-600">Most popular →</div>
+            </a>
+            <a href="/Pages/RentReportingGuide" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[14px]">3</div>
+                <h3 class="mt-4 font-bold text-[18px]">Rent Reporting</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">Can paying rent boost your score? +12 points explained.</p>
+                <div class="mt-4 text-[12px] font-bold">4 min read →</div>
+            </a>
+            <a href="/Pages/CreditUtilizationGuide" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[14px]">4</div>
+                <h3 class="mt-4 font-bold text-[18px]">Utilization Rule: 30%</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">Why you should never use more than 30% of your limit.</p>
+                <div class="mt-4 text-[12px] font-bold">3 min read →</div>
+            </a>
+            <a href="/Pages/AvoidCreditRepairScams" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[14px]">5</div>
+                <h3 class="mt-4 font-bold text-[18px]">Avoid Credit Repair Scams</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">5 red flags the CFPB warns about.</p>
+                <div class="mt-4 text-[12px] font-bold">6 min read →</div>
+            </a>
+            <a href="/Pages/ChimeCreditBuilderReview" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-[12px]">6</div>
+                <h3 class="mt-4 font-bold text-[18px]">Chime Credit Builder Review</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">No fees, no credit check. Does it really build credit?</p>
+                <div class="mt-4 text-[12px] font-bold">Review →</div>
+            </a>
+            <a href="/Pages/SelfCreditBuilderReview" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-[12px]">7</div>
+                <h3 class="mt-4 font-bold text-[18px]">Self Credit Builder Review</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">Installment loan that builds savings + credit.</p>
+                <div class="mt-4 text-[12px] font-bold">Review →</div>
+            </a>
+            <a href="/Pages/HowLongTo700" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[12px]">8</div>
+                <h3 class="mt-4 font-bold text-[18px]">How Long From 0 to 700?</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">Real timeline with Chime + Self + on-time payments.</p>
+                <div class="mt-4 text-[12px] font-bold">7 min read →</div>
+            </a>
+            <a href="/Pages/NoCreditCheckLoans" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[12px]">9</div>
+                <h3 class="mt-4 font-bold text-[18px]">No Credit Check Loans</h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-6">Which loans actually report and which are predatory?</p>
+                <div class="mt-4 text-[12px] font-bold">Guide →</div>
+            </a>
+            <div class="rounded-[20px] bg-slate-900 text-white p-6 flex flex-col justify-center">
+                <div class="text-[18px] font-bold">Test your knowledge</div>
+                <p class="text-[13px] text-slate-400 mt-2 leading-6">Take the free 2-min quiz and get your build plan.</p>
+                <a href="/#calculators" class="mt-5 h-11 px-6 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-[14px] flex items-center justify-center">Open Calculator →</a>
+                <a href="/Pages/CreditCards" class="mt-3 h-11 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-[14px] flex items-center justify-center border border-white/20">Compare Cards →</a>
             </div>
         </div>
+    </section>
 
-        <section class="max-w-[1240px] mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-16">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-[13px] text-emerald-800 mb-6"><span class="bg-emerald-500 text-white px-2 py-0.5 rounded-full text-[11px] font-bold">LEARN</span>7 Guides for Beginners — Click any guide to read</div>
-            <h1 class="text-[34px] md:text-[48px] font-extrabold tracking-tight leading-[0.95] max-w-[640px]">Everything you need to build credit from <span class="text-emerald-500">0.</span></h1>
-            <p class="mt-5 text-[16px] md:text-[17px] leading-7 text-slate-500 max-w-[480px]">No jargon. No affiliate-first rankings. Guides written by former CFPB analyst, reviewed by CFA. Click a guide to start.</p>
-            <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <button onclick="openGuideModal('what_is_score')" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
-                    <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-[14px]">1</div>
-                    <h3 class="mt-4 font-bold text-[18px]">What is a Credit Score?</h3>
-                    <p class="mt-2 text-[13px] text-slate-500 leading-6">FICO vs VantageScore, why 0 is normal, and what 300-850 means.</p>
-                    <div class="mt-4 text-[12px] font-bold">5 min read → Click to read</div>
-                </button>
-                <button onclick="openGuideModal('first_card')" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-emerald-500 transition bg-emerald-50/30 border-emerald-100">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-[14px]">2</div>
-                    <h3 class="mt-4 font-bold text-[18px]">First Card With No History</h3>
-                    <p class="mt-2 text-[13px] text-slate-500 leading-6">Self, Chime, Kikoff compared — which approves you today.</p>
-                    <div class="mt-4 text-[12px] font-bold text-emerald-600">Most popular → Click to compare</div>
-                </button>
-                <button onclick="openGuideModal('rent_reporting')" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[14px]">3</div>
-                    <h3 class="mt-4 font-bold text-[18px]">Rent Reporting</h3>
-                    <p class="mt-2 text-[13px] text-slate-500 leading-6">Can paying rent boost your score? +12 points explained.</p>
-                    <div class="mt-4 text-[12px] font-bold">4 min read → Click to read</div>
-                </button>
-                <button onclick="openGuideModal('utilization')" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[14px]">4</div>
-                    <h3 class="mt-4 font-bold text-[18px]">Utilization Rule: 30%</h3>
-                    <p class="mt-2 text-[13px] text-slate-500 leading-6">Why you should never use more than 30% of your limit.</p>
-                    <div class="mt-4 text-[12px] font-bold">3 min read → Click to read</div>
-                </button>
-                <button onclick="openGuideModal('scams')" class="text-left rounded-[20px] border bg-white p-6 shadow-sm hover:shadow-[0_12px_32px_rgba(15,23,42,0.08)] hover:border-slate-900 transition">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-[14px]">5</div>
-                    <h3 class="mt-4 font-bold text-[18px]">Avoid Credit Repair Scams</h3>
-                    <p class="mt-2 text-[13px] text-slate-500 leading-6">5 red flags the CFPB warns about.</p>
-                    <div class="mt-4 text-[12px] font-bold">6 min read → Click to read</div>
-                </button>
-                <div class="rounded-[20px] bg-slate-900 text-white p-6 flex flex-col justify-center">
-                    <div class="text-[18px] font-bold">Test your knowledge</div>
-                    <p class="text-[13px] text-slate-400 mt-2 leading-6">Take the free 2-min quiz and get your build plan.</p>
-                    <a href="/#calculators" class="mt-5 h-11 px-6 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-[14px] flex items-center justify-center">Open Calculator →</a>
-                    <a href="/Pages/CreditCards" class="mt-3 h-11 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-[14px] flex items-center justify-center border border-white/20">Compare Cards →</a>
-                </div>
-            </div>
-        </section>
+    <div class="border-y border-slate-100 bg-slate-50/70"><div class="max-w-[1240px] mx-auto px-5 md:px-8 py-5 flex flex-col lg:flex-row gap-4 justify-between items-center"><div class="flex items-center gap-2 text-[13px] font-semibold"><span class="tracking-wide">DATA SOURCED FROM:</span><span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Experian</span><span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Equifax</span><span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">CFPB</span></div><div class="text-[12px] px-4 py-2 rounded-full bg-white border shadow-sm"><b>ScoreUp Editorial Team</b> • Sources: <a href="https://www.consumerfinance.gov/" class="underline">CFPB</a>, Experian, Equifax • Updated Oct 19, 2026</div></div></div>
 
-        <div class="border-y border-slate-100 bg-slate-50/70"><div class="max-w-[1240px] mx-auto px-5 md:px-8 py-5 flex flex-col lg:flex-row gap-4 justify-between items-center"><div class="flex items-center gap-2 text-[13px] font-semibold"><span class="tracking-wide">DATA SOURCED FROM:</span><span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Experian</span><span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">Equifax</span><span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">CFPB</span></div><div class="text-[12px] px-4 py-2 rounded-full bg-white border shadow-sm"><b>ScoreUp Editorial Team</b> • Sources: <a href="https://www.consumerfinance.gov/" class="underline">CFPB</a>, Experian, Equifax • Updated Oct 19, 2026</div></div></div>
-
-        <footer class="bg-slate-900 text-slate-300 py-12">
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
-                <div><div class="flex items-center gap-2 text-white font-extrabold text-[18px]"><span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp</div><p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p></div>
-                <div class="space-y-3"><div class="font-bold text-white tracking-widest">COMPANY</div><div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div><div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div><div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div></div>
-                <div class="space-y-3"><div class="font-bold text-white tracking-widest">LEGAL</div><div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div><div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div><div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div></div>
-            </div>
-            <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400"><p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only</p><p>ScoreUp serves US consumers. FICO, CFPB, and product availability based on United States. Data: Experian, Equifax, CFPB • Ads labeled</p></div>
-        </footer>
-        <!-- GUIDE MODAL - MAKES LEARN BUTTONS WORK -->
-        <div id="guideModal" class="fixed inset-0 z-[200] hidden">
-            <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-sm" onclick="closeGuideModal()"></div>
-            <div class="relative min-h-screen flex items-center justify-center p-4">
-                <div class="w-full max-w-[640px] bg-white rounded-[24px] shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
-                    <div class="p-6 border-b flex justify-between items-start sticky top-0 bg-white">
-                        <div class="flex items-center gap-3"><div id="modalIcon" class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">1</div><div><div id="modalTitle" class="font-bold text-[18px]">What is a Credit Score?</div><div class="text-[12px] text-slate-500">Free guide • 5 min read • Updated Oct 2026 • Sources: CFPB, Experian</div></div></div><button onclick="closeGuideModal()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button>
-                    </div>
-                    <div class="p-6">
-                        <div id="modalContent" class="text-[14px] leading-7 text-slate-700">Content</div>
-                        <div id="modalTips" class="mt-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-100 text-[13px] leading-6"></div>
-                        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-                            <button onclick="closeGuideModal()" class="flex-1 h-11 rounded-full border border-slate-200 font-semibold text-[14px]">Close Guide</button>
-                            <a id="modalLink" href="/Pages/CreditCards" class="flex-1 h-11 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-[14px] flex items-center justify-center">See Best Cards for Beginners →</a>
-                        </div>
-                        <div class="mt-4 p-3 rounded-xl bg-slate-50 border text-[11px] leading-5 text-slate-500"><b>Sources:</b> CFPB (consumerfinance.gov), Experian, Equifax. Written by Amanda S., former CFPB analyst. Reviewed by Dr. James L., CFA. Educational only, not financial advice. Updated Oct 19, 2026.</div>
-                    </div>
-                </div>
-            </div>
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
+            <div><div class="flex items-center gap-2 text-white font-extrabold text-[18px]"><span class="w-7 h-7 bg-white text-slate-900 rounded-lg flex items-center justify-center">↗</span> ScoreUp</div><p class="mt-3 text-[12px] leading-relaxed text-slate-400 max-w-[300px]">ScoreUp helps beginners build credit from scratch with honest reviews and free calculators. Not a bank. Not a credit bureau.</p></div>
+            <div class="space-y-3"><div class="font-bold text-white tracking-widest">COMPANY</div><div><a href="/Pages/About" class="hover:text-white hover:underline">About us</a></div><div><a href="/Pages/About#how-we-make-money" class="hover:text-white hover:underline">How we make money</a></div><div><a href="/Pages/Contact" class="hover:text-white hover:underline">Contact</a></div></div>
+            <div class="space-y-3"><div class="font-bold text-white tracking-widest">LEGAL</div><div><a href="/Pages/Privacy" class="hover:text-white hover:underline">Privacy Policy</a></div><div><a href="/Pages/Terms" class="hover:text-white hover:underline">Terms</a></div><div><a href="/Pages/About#disclosure" class="hover:text-white hover:underline">Ad Disclosure</a></div></div>
         </div>
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-400"><p><b class="text-slate-300">© 2026 ScoreUp</b> • Educational only</p><p>ScoreUp serves US consumers. FICO, CFPB, and product availability based on United States. Data: Experian, Equifax, CFPB • Ads labeled</p></div>
+    </footer>
 
-        <script>
-            const guides = {
-            what_is_score: { title: 'What is a Credit Score?', icon: '1', content: `<p><b>Credit score = trust number.</b> Ranges 300-850. 0 is not bad — it just means no history yet. You start at 0, not 300.</p><p class='mt-3'><b>FICO vs VantageScore:</b> Lenders use FICO (90% of decisions). VantageScore is used by free apps. Both use same data but weight differently.</p><p class='mt-3'><b>What builds it:</b> Payment history (35%), amounts owed (30%), length (15%), new credit (10%), mix (10%).</p><p class='mt-3'>With no history, focus on payment history first — that is why Self and Chime work: they create an on-time payment history out of nothing.</p>`, tips: '<b>Quick tip:</b> You have no score but you might have a file. Check annualcreditreport.com — free weekly. Look for errors first.', link: '/Pages/CreditCards', linkText: 'See cards that build history →' },
-            first_card: { title: 'First Card With No History — Which Approves You?', icon: '2', content: `<p><b>3 legit options that approve with $0 history:</b></p><p class='mt-3'><b>1. Chime Credit Builder (98% approval):</b> No credit check to apply, no annual fee, no interest. Requires Chime Checking. Reports to all 3. Best for zero fees ever.</p><p class='mt-3'><b>2. Self Credit Builder (92%):</b> You pay into locked savings that reports as loan. At end you get savings back. Builds savings + credit. Good if you want savings discipline.</p><p class='mt-3'><b>3. Kikoff (85%):</b> $0 starter line reports as revolving. $5/mo premium reports higher limit. Good for adding revolving mix.</p><p class='mt-3'><b>Avoid:</b> Cards with $200 annual fee for $300 limit — predatory per CFPB.</p>`, tips: '<b>Best strategy:</b> Start with Chime (revolving) + Self (installment) = 2 tradelines in 1 month. Mix helps score faster than 1 card alone.', link: '/Pages/CreditCards', linkText: 'Compare approval rates →' },
-            rent_reporting: { title: 'Rent Reporting: Does Paying Rent Boost Score?', icon: '3', content: `<p><b>Short answer: Yes, for thin files.</b> If you have 0-2 accounts, rent reporting can add +10-20 points avg with 12 months per TransUnion data.</p><p class='mt-3'><b>How it works:</b> Services like Boom, RentTrack, Piñata report your rent to bureaus. Landlord does not need to do anything in most cases.</p><p class='mt-3'><b>Cost:</b> $2-$10/mo. Free options exist via Piñata (reports to TransUnion only) or if your property uses Esusu.</p><p class='mt-3'><b>Who benefits most:</b> 0 history + on-time rent 12 months = biggest lift. If you already have 700+, lift is 0-5 points.</p>`, tips: '<b>Use calculator on home page:</b> Move rent slider $500-$3000 to see your estimated lift. Our calc uses TransUnion thin-file avg.', link: '/#calculators', linkText: 'Open rent calculator →' },
-            utilization: { title: 'Utilization Rule: Never Use More Than 30%', icon: '4', content: `<p><b>Utilization = balance ÷ limit.</b> If limit $500 and you use $400, utilization = 80% = bad for score.</p><p class='mt-3'><b>Rule:</b> Keep under 30% always, under 10% ideal. Under 1% + paid in full = best.</p><p class='mt-3'><b>Example:</b> Limit $500 → never let statement show >$150. Pay twice a month if needed.</p><p class='mt-3'><b>Why it matters:</b> 30% of score. High utilization signals risk even if you pay in full. For beginners with $300 limit, that is only $90.</p><p class='mt-3'><b>Trick:</b> Ask for limit increase after 6 months on-time, or pay before statement closes.</p>`, tips: '<b>Beginner mistake:</b> Using $290 of $300 limit and paying in full still hurts score that month. Keep statement balance low, not just pay in full.', link: '/Pages/Learn', linkText: 'Back to guides →' },
-            scams: { title: 'Avoid Credit Repair Scams — 5 Red Flags (CFPB)', icon: '5', content: `<p><b>CFPB warns about these 5 scams:</b></p><p class='mt-3'><b>1. "We can remove accurate negative info"</b> — Lie. Only errors can be removed. Accurate late payments stay 7 years.</p><p class='mt-3'><b>2. Upfront fee before work</b> — Illegal per Credit Repair Organizations Act. No fee before services done.</p><p class='mt-3'><b>3. "We have special relationship with bureaus"</b> — No one does.</p><p class='mt-3'><b>4. Asks you to dispute accurate info or create CPN</b> — CPN = fraud. Disputing accurate info = fraud.</p><p class='mt-3'><b>5. Guarantees specific score increase</b> — Impossible to guarantee.</p><p class='mt-3'><b>What to do instead:</b> Dispute errors free at annualcreditreport.com, build positive history with Self/Chime.</p>`, tips: '<b>Report scams:</b> consumerfinance.gov/complaint + ftc.gov. Free help: NFCC.org for nonprofit credit counselor.', link: 'https://www.consumerfinance.gov/ask-cfpb/what-is-credit-repair-en-1343/', linkText: 'Read CFPB official guide →' }
-            };
-            function openGuideModal(key){
-            const g = guides[key]; if(!g) return;
-            document.getElementById('modalTitle').innerText = g.title;
-            document.getElementById('modalIcon').innerText = g.icon;
-            document.getElementById('modalContent').innerHTML = g.content;
-            document.getElementById('modalTips').innerHTML = g.tips;
-            document.getElementById('modalLink').href = g.link;
-            document.getElementById('modalLink').innerText = g.linkText;
-            document.getElementById('guideModal').classList.remove('hidden');
-            document.body.classList.add('no-scroll');
-            }
-            function closeGuideModal(){ document.getElementById('guideModal').classList.add('hidden'); document.body.classList.remove('no-scroll'); }
-            function openMenu(){ const m=document.getElementById('mobileMenu'); if(m){m.classList.remove('hidden'); document.body.classList.add('no-scroll');} }
-            function closeMenu(){ const m=document.getElementById('mobileMenu'); if(m){m.classList.add('hidden'); document.body.classList.remove('no-scroll');} }
-            document.addEventListener('DOMContentLoaded', function(){
-            const closeBtn=document.getElementById('closeMenuBtn'); const overlay=document.getElementById('menuOverlay');
-            if(closeBtn) closeBtn.addEventListener('click', closeMenu); if(overlay) overlay.addEventListener('click', closeMenu);
-            document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); closeGuideModal(); } });
-            });
-        </script>
-    </body>
+    <script>
+        function openMenu(){ const m=document.getElementById('mobileMenu'); if(m){m.classList.remove('hidden'); document.body.classList.add('no-scroll');} }
+        function closeMenu(){ const m=document.getElementById('mobileMenu'); if(m){m.classList.add('hidden'); document.body.classList.remove('no-scroll');} }
+        document.addEventListener('DOMContentLoaded', function(){
+        const closeBtn=document.getElementById('closeMenuBtn'); const overlay=document.getElementById('menuOverlay');
+        if(closeBtn) closeBtn.addEventListener('click', closeMenu); if(overlay) overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); } });
+        });
+    </script>
+</body>
 </html>

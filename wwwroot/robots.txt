@@ -1,18 +1,26 @@
 ﻿User-agent: *
 Allow: /
 
-# Block admin and sensitive paths
+# Block only admin and API - NOT query strings (needed for FlexOffers/Impact tracking)
 Disallow: /admin/
 Disallow: /api/
-Disallow: /*.json$
-Disallow: /*?*
 
-# Sitemap - Absolute URL required for Google
+# Sitemap - Absolute URL required for Google + FlexOffers
 Sitemap: https://getscoreup.co.za/sitemap.xml
 
-# For AdSense / Googlebot
+# For AdSense / Googlebot - Explicit allow
 User-agent: Mediapartners-Google
 Allow: /
 
 User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# FlexOffers and Impact crawlers - Explicit allow
+User-agent: FlexOffers
+Allow: /
+
+User-agent: Impact
 Allow: /

@@ -16,6 +16,7 @@ namespace ScoreUp.Controllers
             _logger = logger;
         }
 
+        // --- YOUR EXISTING PAGES (UNCHANGED) ---
         public IActionResult About() => View();
         public IActionResult Privacy() => View();
         public IActionResult Terms() => View();
@@ -23,6 +24,24 @@ namespace ScoreUp.Controllers
         public IActionResult Learn() => View();
         public IActionResult CreditCards() => View();
         public IActionResult Loans() => View();
+
+        // --- NEW PAGES FOR FLEXOFFERS APPROVAL (ADDED ONLY) ---
+        public IActionResult AdDisclosure() => View();
+        public IActionResult HowWeMakeMoney() => View();
+        public IActionResult EditorialPolicy() => View();
+        public IActionResult SitemapPage() => View();
+
+        // 10 ARTICLE PAGES TO GO FROM 7 TO 17 PAGES
+        public IActionResult BuildCreditFromZero() => View();
+        public IActionResult BestNoCreditCheckBanks() => View();
+        public IActionResult ChimeCreditBuilderReview() => View();
+        public IActionResult SelfCreditBuilderReview() => View();
+        public IActionResult KikoffReview() => View();
+        public IActionResult HowLongTo700() => View();
+        public IActionResult CreditUtilizationGuide() => View();
+        public IActionResult RentReportingGuide() => View();
+        public IActionResult NoCreditCheckLoans() => View();
+        public IActionResult AvoidCreditRepairScams() => View();
 
         public class ContactRequest
         {
@@ -35,7 +54,7 @@ namespace ScoreUp.Controllers
         [HttpPost("Pages/Contact")]
         public async Task<IActionResult> ContactPost([FromBody] ContactRequest req)
         {
-            
+
             try
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "messages.txt");
@@ -51,7 +70,7 @@ namespace ScoreUp.Controllers
 
             try
             {
-                
+
                 var fromEmail = _config["EmailSettings:SenderEmail"] ?? "wandilecele28@gmail.com";
                 var appPassword = _config["EmailSettings:SenderPassword"];
                 var toEmail = _config["EmailSettings:RecipientEmail"] ?? "wandilecele28@gmail.com";
@@ -65,14 +84,14 @@ namespace ScoreUp.Controllers
                     return Json(new { success = false, error = "EmailSettings:SenderPassword not set in appsettings.json" });
                 }
 
-                
+
                 using var smtp = new SmtpClient(smtpServer)
                 {
                     Port = smtpPort,
                     Credentials = new NetworkCredential(fromEmail, appPassword),
                     EnableSsl = true,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Timeout = 10000 
+                    Timeout = 10000
                 };
 
                 var mail = new MailMessage(fromEmail, toEmail)
@@ -91,7 +110,7 @@ namespace ScoreUp.Controllers
             catch (OperationCanceledException)
             {
                 _logger.LogError("SMTP timeout after 10 sec - Render free blocks port 587");
-                
+
                 return Json(new { success = true, warning = "Saved to messages.txt, SMTP blocked on Render free" });
             }
             catch (Exception ex)
@@ -101,7 +120,7 @@ namespace ScoreUp.Controllers
             }
         }
 
-        
+
         [HttpPost]
         public async Task<IActionResult> Contact(string name, string email, string message)
         {
